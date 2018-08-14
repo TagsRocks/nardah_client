@@ -1,0 +1,15 @@
+bin/**
+out/**
+.idea/**
+/bin
+.DS_Store**
+.project**
+.classpath**
+.class**
+/bin/
+/out/
+/cache/
+*.iml
+*.eml
+*.userlibraries
+*.class
