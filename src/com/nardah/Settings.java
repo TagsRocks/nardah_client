@@ -14,7 +14,7 @@ public final class Settings {
 	private final static String FILE_NAME = "settings.dat";
 
 	public static boolean REMEMBER_ME = true;
-	public static boolean DRAW_BUBBLE = true;
+	public static boolean DRAW_BUBBLE = false;
 	public static boolean DRAW_ANNOUNCEMENT = true;
 
 	static int CONTEXT_MENU;

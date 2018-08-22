@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+import static com.nardah.Utility.launchURL;
+
 
 /**
  * Creates a new user interface to render the client
@@ -466,13 +468,13 @@ public class ClientFrame extends Client {
                 } else if (tabs_right == -2) {
                     tabs_right = 2;
                 }
-             //   if (tabs_left > -1 && tabs_left < Configuration.LEFT_NAV_LINKS.length) {
-             //       launchURL(Configuration.LEFT_NAV_LINKS[tabs_left]);
-               // } else if (tabs_right > -1 && tabs_right < Configuration.RIGHT_NAV_LINKS.length) {
-               //     launchURL(Configuration.RIGHT_NAV_LINKS[tabs_right]);
+                if (tabs_left > -1 && tabs_left < Configuration.LEFT_NAV_LINKS.length) {
+                    launchURL(Configuration.LEFT_NAV_LINKS[tabs_left]);
+                } else if (tabs_right > -1 && tabs_right < Configuration.RIGHT_NAV_LINKS.length) {
+                    launchURL(Configuration.RIGHT_NAV_LINKS[tabs_right]);
                 }
             }
         }
     }
-//}
+}
 

@@ -59,8 +59,8 @@ public abstract class LoginComponent {
 					client.announcementTicks = 0;
 				}
 			}
-			int color1 = 0xed2d2d;
-			int color2 = 0x701010;
+			int color1 = 0xc98502;//c98502
+			int color2 = 0x905a08;
 			Raster.drawAlphaGradient(0, 0, Client.frameWidth, 25, color1, color2, 205 - (int) (50 * Math.sin(client.announcementFade / 20.0)));
 			client.smallFont.drawText(true, client.announcementMovement, 0xffffff, Configuration.ANNOUNCEMENT[client.announcementTicks], 17);
 		}
@@ -73,9 +73,9 @@ public abstract class LoginComponent {
 		int centerX = getX();
 		int centerY = getY();
 
-		if (Settings.DRAW_BUBBLE)
-			for (Bubble bubble : Client.bubbles)
-				bubble.draw(Bubble.BOUNCING_BALLS);
+//		if (Settings.DRAW_BUBBLE)
+//			for (Bubble bubble : Client.bubbles)
+//				bubble.draw(Bubble.BOUNCING_BALLS);
 
 //		if (client.mouseInRegion(centerX - 58, centerY + 132, centerX + 27, centerY + 158)) {
 //			Client.spriteCache.get(879).drawSprite(324, 386, 0);

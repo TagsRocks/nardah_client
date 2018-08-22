@@ -37,7 +37,7 @@ public class SettingScreen extends LoginComponent {
 		client.smallFont.drawCenteredText(Utility.getPrefix(Settings.DRAW_ANNOUNCEMENT), centerX + 5, (Settings.DRAW_ANNOUNCEMENT ? "Enabled" : "Disabled"), centerY - 16, true);
 
 		//bubbles
-		client.regularText.drawCenteredText(0xFFFFFF, centerX + 5, "Bubbles:", centerY + 20, true);
+		/*client.regularText.drawCenteredText(0xFFFFFF, centerX + 5, "Bubbles:", centerY + 20, true);
 		if (client.mouseInRegion(centerX - 47, centerY + 24, centerX + 58, centerY + 64)) {
 			Raster.fillRectangle(336, 280, 100, 30, 0x1F1D19, 105);
 			Raster.drawRectangle(336, 280, 100, 30, 0x3d3427);
@@ -46,7 +46,7 @@ public class SettingScreen extends LoginComponent {
 			Raster.drawRectangle(336, 280, 100, 30, 0x3d3427);
 		}
 		client.smallFont.drawCenteredText(Utility.getPrefix(Settings.DRAW_BUBBLE), centerX + 5, (Settings.DRAW_BUBBLE ? "Enabled" : "Disabled"), centerY + 49, true);
-
+*/
         /* Announcement */
 		announcement(client);
 

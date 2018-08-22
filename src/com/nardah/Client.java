@@ -3781,7 +3781,7 @@ public class Client extends GameApplet {
 
     public void init() {
         loadingTime = new Stopwatch();
-        Configuration.LOADING_MESSAGE = Utility.randomElement(Configuration.LOADING_MESSAGES);
+//        Configuration.LOADING_MESSAGE = Utility.randomElement(Configuration.LOADING_MESSAGES);
         try {
             cache_dat = new RandomAccessFile(Utility.findcachedir() + "main_file_cache.dat", "rw");
             for (int j = 0; j < 5; j++) {
@@ -4281,14 +4281,17 @@ public class Client extends GameApplet {
     }
 
     void drawLoadingText(int i, String s) {
+        if (s != null) {//remove for loading text
+            s = "";
+        }
         if (titleStreamLoader == null) {
             super.drawLoadingText(i, s);
             return;
         }
         loginScreenIP.initDrawingArea();
         spriteCache.get(62).drawSprite(0, 0);
-        newRegularFont.drawCenteredString(Configuration.LOADING_MESSAGE, 355, 390, 0x948B82, 0);
-        newBoldFont.drawBasicString(s, 265, 265, 0x948B82, 0);
+//        newRegularFont.drawCenteredString(Configuration.LOADING_MESSAGE, 355, 390, 0x948B82, 0);
+        newBoldFont.drawBasicString(s, 255, 270, 0x948B82, 0);
         newBoldFont.drawBasicString(i + "%", 424, 255, 0xffffff, 0);
         loginScreenIP.drawGraphics(super.graphics, 0, 0);
     }
@@ -9356,9 +9359,11 @@ public class Client extends GameApplet {
         if (entity.emoteAnimation != -1 && entity.animationDelay <= 1) {
             if (Animation.animations == null)
                 return;
-            Animation animation_2 =
-                    Animation.animations[
-                            entity.emoteAnimation];
+            if (entity.emoteAnimation >= Animation.animations.length) {
+                System.out.println("Entity emote animation " + entity.emoteAnimation + " does not exsist.");
+                return;
+            }
+            Animation animation_2 = Animation.animations[entity.emoteAnimation];
             if (animation_2 == null)
                 return;
             if (animation_2.animatingPrecedence == 1 && entity.anInt1542 > 0 && entity.startForceMovement <= tick && entity.endForceMovement < tick) {
