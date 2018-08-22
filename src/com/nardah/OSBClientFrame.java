@@ -146,7 +146,7 @@ public class OSBClientFrame extends ClientFrame {
             /*
              * Initialize the jframe which will hold everything
              */
-            frame = new JFrame(Configuration.NAME + " - where legends go after RS got shit");
+            frame = new JFrame(Configuration.NAME + " - The Desert Adventure Awaits");
             frame.setUndecorated(true);
             frame.setLayout(new BorderLayout());
             frame.setResizable(true);

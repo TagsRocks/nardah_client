@@ -8,7 +8,7 @@ package com.nardah;
  */
 public enum Connection {
     /** The economy (main) world. */
-    ECONOMY("ECO", "173.95.153.201"),
+    ECONOMY("ECO", "35.202.186.99"),
 
     /** The management world - used for private testing by the management team. */
     MANAGEMENT("MGN", "127.0.0.1"),

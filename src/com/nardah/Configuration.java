@@ -29,7 +29,7 @@ public class Configuration {
     static boolean CLIENT_DATA = false;
 
     /** State of client being in debug mode. */
-    public static boolean DEBUG_MODE = true;
+    public static boolean DEBUG_MODE = false;
 
     /** Debug the interfaces. */
     static boolean DEBUG_INTERFACES = false;
@@ -68,13 +68,13 @@ public class Configuration {
     public static final String[] RIGHT_NAV_LINKS = {"https://www.osroyale.com/vote", "https://www.osroyale.com/store/", "https://www.osroyale.com/highscores/"};
 
     /** The IP address client will be connecting to. */
-    public static Connection CONNECTION = Connection.DEVELOPMENT;
+    public static Connection CONNECTION = Connection.ECONOMY;
 
     /** The current version of the cache. */
-    public static final int CACHE_VERSION = 3;
+    public static final int CACHE_VERSION = 4;
 
     /** The current version of the client. */
-    public static final int CLIENT_VERSION = 5;
+    public static final int CLIENT_VERSION = 6;
 
     /** The current game version. */
     public static final int GAME_VERSION = CLIENT_VERSION + CACHE_VERSION;

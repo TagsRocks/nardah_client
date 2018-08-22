@@ -2107,7 +2107,7 @@ public class Client extends GameApplet {
                         }
                         // report
                     } else if (super.lastClickX >= 417 && super.lastClickX <= 503 && super.lastClickY >= yOffset + 468 && super.lastClickY <= yOffset + 496) {
-                        Utility.launchURL("www.battlerune.net");
+                        Utility.launchURL("www.nardah.com");
                     }
                 }
                 break;
@@ -5486,7 +5486,7 @@ public class Client extends GameApplet {
             String s2 = menuActionName[id];
             int j2 = s2.indexOf(">");
             if (j2 != -1)
-                Utility.launchURL("www.battlerune.net");
+                Utility.launchURL("www.nardah.com");
         }
         if (action == 491) {
             Player class30_sub2_sub4_sub1_sub2_6 = playerArray[localPlayerIndex];

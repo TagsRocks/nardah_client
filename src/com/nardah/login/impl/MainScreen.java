@@ -33,7 +33,7 @@ public class MainScreen extends LoginComponent {
         /* Login Button */
         if (client.mouseInRegion(318, 285, 452, 328)) {
             Client.spriteCache.get(59).drawSprite(318, 285, 0);
-            addTooltip("Log into BattleRune");
+            addTooltip("Log into Nardah");
         } else {
             Client.spriteCache.get(58).drawTransparentSprite(318, 285, client.loginTick);
         }

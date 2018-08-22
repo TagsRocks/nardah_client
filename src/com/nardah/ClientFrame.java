@@ -90,7 +90,7 @@ public class ClientFrame extends Client {
 			/*
              * Initialize the jframe which will hold everything
 			 */
-            frame = new JFrame(Configuration.NAME + " - where legends go after RS got shit");
+            frame = new JFrame(Configuration.NAME + " - The Desert Adventure Awaits");
             frame.setLayout(new BorderLayout());
             frame.setResizable(false);
             frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);

@@ -688,7 +688,7 @@ public class CustomInterface extends RSInterface {
     public static void welcome(TextDrawingArea[] TDA) {
         RSInterface rsinterface = addInterface(450);
         addSprite(21300, 778);
-        addHoverButton(21301, 298, 367, 45, "Enter Near Reality", -1, 21302, 1);
+        addHoverButton(21301, 298, 367, 45, "Enter Nardah", -1, 21302, 1);
         addHoveredButton(21302, 779, 367, 45, 21303);
         addHoverButton(21304, 298, 172, 28, "View Latest Announcements", -1, 21305, 1);
         addHoveredButton(21305, 780, 172, 28, 21306);
@@ -696,13 +696,13 @@ public class CustomInterface extends RSInterface {
         addHoveredButton(21308, 780, 172, 28, 21309);
         //addHead(21310, 35, 35, 2500);
         addHead(21342, 2, 306, 588, 35, 35, 900);
-        addText(21311, "WELCOME TO Nardah!", 0xE9EBC5, true, true, 52, TDA, 3);
+        addText(21311, "WELCOME TO NARDAH!", 0xE9EBC5, true, true, 52, TDA, 3);
         addText(21312, "CLICK HERE TO PLAY", 0x008DFF, true, true, 52, TDA, 3);
         addText(21313, "View Latest Announcement", 0xC9C2BF, true, true, 52, TDA, 1);
         addText(21314, "View Latest Update", 0xC9C2BF, true, true, 52, TDA, 1);
-        addText(21315, "Near Reality is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
-        addText(21316, "Near Reality is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
-        addText(21317, "Near Reality is dope as fuck!", 0x000000, true, false, 52, TDA, 0);
+        addText(21315, "www.nardah.com", 0x000000, true, false, 52, TDA, 0);
+         addText(21316, "", 0x000000, true, false, 52, TDA, 0);
+         addText(21317, "", 0x000000, true, false, 52, TDA, 0);
         addText(21318, "You last logged in from 127.0.0.1", 0xEBCD96, true, true, 52, TDA, 0);
         addMarqueeText(21319, 0xEBCD96, true, 52, 3, TDA);
         addText(21320, "Bank pin line 1", 0xC9C2BF, false, true, 52, TDA, 0);
@@ -1851,7 +1851,7 @@ public class CustomInterface extends RSInterface {
         addText(36714, "Player Information", 0xff9933, true, true, -1, tda, 1);
         addText(36715, "Date created:", 0xff9933, true, true, -1, tda, 0);
         addText(36716, "", 0xFFB83F, true, true, -1, tda, 0);
-        addText(36717, "Disturbution of private information will be dealt <col=ff0000>severely</col>", 0xff9933, true, true, -1, tda, 0);
+        addText(36717, "Distribution of private information will be dealt <col=ff0000>severely</col>", 0xff9933, true, true, -1, tda, 0);
         addHoverButton(36718, 71, 16, 16, "Update players", -1, 36719, 1);
         addHoveredButton(36719, 72, 16, 16, 36720);
 
@@ -3269,7 +3269,7 @@ public class CustomInterface extends RSInterface {
     public static void starter(TextDrawingArea[] daniel) {
         RSInterface Interface = addInterface(57500);
         addSprite(57501, 275);
-        addText(57502, "Near Reality Account Setup", 0xff9933, true, true, 52, daniel, 2);
+        addText(57502, "Nardah Account Setup", 0xff9933, true, true, 52, daniel, 2);
         addText(57503, "Mode Description:", 0xff9933, true, true, 52, daniel, 2);
         addText(57504, "Description line here (57504)", 0xff9933, true, true, 52, daniel, 0);
         addText(57505, "Description line here (57505)", 0xff9933, true, true, 52, daniel, 0);

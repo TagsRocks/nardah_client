@@ -39,7 +39,7 @@ public class WelcomeUpdateScreen extends UpdateComponent {
 			setLabel("Hello");
 
 		else if (stage == 2 || stage == 3)
-			setLabel("Welcome to BattleRune");
+			setLabel("Welcome to Nardah");
 
 		else if (stage == 4 || stage == 5)
 			setLabel("Please wait as we set up your files");
