@@ -48,7 +48,7 @@ public final class SpriteCache implements Closeable {
 			final int entries = (int) (metaChannel.size() / 10);
 
 			if (id > entries) {
-				System.out.println(String.format("id=%d > size=%d", id, entries));
+				//System.out.println(String.format("id=%d > size=%d", id, entries));
 				return null;
 			}
 

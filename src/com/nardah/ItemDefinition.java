@@ -249,19 +249,587 @@ public final class ItemDefinition {
         itemDef.id = id;
         itemDef.setDefaults();
         itemDef.decode(dataBuf);
+        /* Customs added here? */
 
-        if(itemDef.name.toLowerCase().startsWith("logs")) {
-            itemDef.itemActions = new String[5];
-            itemDef.itemActions[1] = "Light";
-//            System.out.println(itemDef.itemActions.length);
+        switch (id) {
+            case 13190:
+                itemDef.name = "$10 Donator bond";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Redeem";
+                itemDef.modelId = 29210;
+                itemDef.spriteScale = 2300;
+                itemDef.spritePitch = 512;
+                itemDef.originalModelColors = new int[] {5652, 5652, 5652, 5652, 5652, 5652, 5652};
+                itemDef.modifiedModelColors = new int[] {22464, 20416, 22451, 22181, 22449, 22305, 21435};
+                break;
+            case 13191:
+                itemDef.name = "$50 Donator bond";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Redeem";
+                itemDef.modelId = 29210;
+                itemDef.spriteScale = 2300;
+                itemDef.spritePitch = 512;
+                itemDef.originalModelColors = new int[] {-21568, -21568, -21568, -21568, -21568, -21568, -21568};
+                itemDef.modifiedModelColors = new int[] {22464, 20416, 22451, 22181, 22449, 22305, 21435};
+                break;
+            case 13192:
+                itemDef.name = "$100 Donator bond";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Redeem";
+                itemDef.modelId = 29210;
+                itemDef.spriteScale = 2300;
+                itemDef.spritePitch = 512;
+                itemDef.originalModelColors = new int[] {22464, 22464, 22464, 22464, 22464, 22464, 22464};
+                itemDef.modifiedModelColors = new int[] {22464, 20416, 22451, 22181, 22449, 22305, 21435};
+                break;
+            case 13193:
+                itemDef.name = "$200 Donator bond";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Redeem";
+                itemDef.modelId = 29210;
+                itemDef.spriteScale = 2300;
+                itemDef.spritePitch = 512;
+                itemDef.originalModelColors = new int[] {-31858, -31858, -31858, -31858, -31858, -31858, -31858};
+                itemDef.modifiedModelColors = new int[] {22464, 20416, 22451, 22181, 22449, 22305, 21435};
+                break;
+            case 13194:
+                itemDef.name = "$500 Donator bond";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Redeem";
+                itemDef.modelId = 29210;
+                itemDef.spriteScale = 2300;
+                itemDef.spritePitch = 512;
+                itemDef.originalModelColors = new int[] {8125, 8125, 8125, 8125, 8125, 8125, 8125};
+                itemDef.modifiedModelColors = new int[] {22464, 20416, 22451, 22181, 22449, 22305, 21435};
+                itemDef.certID = -1;
+                itemDef.certTemplateID = -1;
+                break;
+            case 13111:
+                itemDef.name = "Valyrian Sword";
+                itemDef.description = "The most rarest sword, forged from great Valyrian steel.";
+
+                break;
+            case 19687:
+                itemDef.name = "Vesta's full helm";
+                break;
+            case 6798:
+                itemDef.name = "Arrowhead scroll";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Unlock";
+                break;
+            case 6799:
+                itemDef.name = "Masterbaiter scroll";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Unlock";
+                break;
+            case 6800:
+                itemDef.name = "Double wood scroll";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Unlock";
+                break;
+            case 6801:
+                itemDef.name = "Little birdy scroll";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Unlock";
+                break;
+            case 6802:
+                itemDef.name = "The rock scroll";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Unlock";
+                break;
+            case 6803:
+                itemDef.name = "Flame on scroll";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Unlock";
+                break;
+            case 11941:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Check";
+                break;
+            case 7478:
+                itemDef.itemActions = new String[5];
+                itemDef.name = "Vote token";
+                itemDef.description = "Exchange these tokens for a mystery box and vote points by speaking to Hopleez!";
+                break;
+            case 8038:
+                itemDef.name = "Pet mystery box";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Open";
+                break;
+            case 6828:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Open";
+                break;
+
+            case 6199:
+                itemDef.name = "Bronze mystery box";
+                itemDef.modelId = 2426;
+                itemDef.spriteScale = 1180;
+                itemDef.spriteCameraRoll = 172;
+                itemDef.spritePitch = 160;
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Open";
+                itemDef.modifiedModelColors = new int[]{22410, 2999};
+                itemDef.originalModelColors = new int[]{5652, 7050};
+                break;
+            case 12955:
+                itemDef.name = "Silver mystery box";
+                itemDef.modelId = 2426;
+                itemDef.spriteScale = 1180;
+                itemDef.spriteCameraRoll = 172;
+                itemDef.spritePitch = 160;
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Open";
+                itemDef.modifiedModelColors = new int[]{22410, 2999};
+                itemDef.originalModelColors = new int[]{115, 61};
+                break;
+            case 11739:
+                itemDef.name = "Gold mystery box";
+                itemDef.modelId = 2426;
+                itemDef.spriteScale = 1180;
+                itemDef.spriteCameraRoll = 172;
+                itemDef.spritePitch = 160;
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Open";
+                itemDef.modifiedModelColors = new int[]{22410, 2999};
+                itemDef.originalModelColors = new int[]{8128, 6073};
+                break;
+
+
+            case 21216:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "White whip"; //Name
+                itemDef.description = "A white whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 100;
+                break;
+            case 21217:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "Iron whip"; //Name
+                itemDef.description = "A Iron whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 20;
+                break;
+            case 21218:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "Steel whip"; //Name
+                itemDef.description = "A Steel whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 70;
+                break;
+            case 21219:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "Black whip"; //Name
+                itemDef.description = "A Black whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 0;
+                break;
+            case 21220:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "Mithril whip"; //Name
+                itemDef.description = "A Mithril whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 43297;
+                break;
+            case 21221:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "Adamant whip"; //Name
+                itemDef.description = "A Adamant whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 21662;
+                break;
+            case 21222:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "Rune whip"; //Name
+                itemDef.description = "A Rune whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 36133;
+                break;
+            case 21223:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "Dragon whip"; //Name
+                itemDef.description = "A Dragon whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 926;
+                break;
+            case 21224:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "Barrows whip"; //Name
+                itemDef.description = "A Barrows whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 5652;
+                break;
+            case 21225:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "Lime whip"; //Name
+                itemDef.description = "A Lime whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 17350;
+                break;
+            case 21226:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "Pink whip"; //Name
+                itemDef.description = "A Pink whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 257770;
+                break;
+            case 21227:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "Elemental whip"; //Name
+                itemDef.description = "A Elemental whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 51120;
+                break;
+            case 12006:
+                itemDef.name = "Abyssal whip(p+)"; //Name
+                itemDef.description = "A Poisoned a Abbysal whip.";
+                break;
+            //Pickup the fucking phone you mother fucker
+            case 21228:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                itemDef.name = "Frost whip"; //Name
+                itemDef.description = "A Frost whip.";
+                itemDef.spritePitch = 280;
+                itemDef.spriteCameraRoll = 0;
+                itemDef.spriteTranslateX = -1;
+                itemDef.spriteTranslateY = 56;
+                itemDef.modelId = 5412;
+                itemDef.primaryMaleModel = 5409;
+                itemDef.primaryFemaleModel = 5409;
+                itemDef.spriteScale = 840;
+                itemDef.originalModelColors = new int[2];
+                itemDef.modifiedModelColors = new int[2];
+                itemDef.modifiedModelColors[0] = 528;
+                itemDef.originalModelColors[0] = 34770;
+                break;
+            case 6640:
+                itemDef.name = "Blood Crystal";
+                itemDef.itemActions[0] = "Open";
+                break;
+            case 5509:
+            case 5510:
+            case 5512:
+            case 5514:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Fill";
+                itemDef.itemActions[2] = "Empty";
+                break;
+
+            case 5733:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Yum";
+                break;
+
+            case 4155:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Check";
+                break;
+            case 15098:
+                itemDef.name = "Dice (up to 100)";
+                itemDef.modelId = 47852;
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Private-roll";
+                itemDef.itemActions[2] = "Clan-roll";
+                itemDef.spriteCameraRoll = 215;
+                itemDef.spritePitch = 94;
+                itemDef.spriteScale = 1104;
+                itemDef.ambience = 25;
+                break;
+            case 6831:
+                itemDef.name = "Mime Box";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Open";
+                itemDef.description = "Contains a random reward of mime costume, mime emote or 75k coins.";
+                break;
+            case 6832:
+                itemDef.name = "Drill Demon Box";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Open";
+                itemDef.description = "Contains a random reward of drill demon costume, drill demon emote or 75k coins.";
+                break;
+            case 13307:
+                itemDef.name = "Credits";
+                itemDef.description = "Lovely credits!";
+                break;
+            case 12897:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Open";
+                itemDef.name = "Clan Showcase Box";
+                itemDef.description = "Opening this box will award a random showcase item based on the clan's level.";
+                break;
+            case 6854:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Open";
+                itemDef.name = "Clan Resource Box";
+                itemDef.description = "Inside this box contains random resources for the clan's bank.";
+                break;
+            case 2568:
+                itemDef.itemActions[2] = "Check charges";
+                break;
+            case 13188:
+                itemDef.name = "Dragon claws";
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[1] = "Wield";
+                break;
+            case 8013:
+                itemDef.name = "Home teleport";
+                break;
+            case 20527:
+                itemDef.name = "Near Reality tokens";
+                itemDef.description = "The main currency for NR.";
+                itemDef.stackable = true;
+                break;
+
+            case 10834:
+                itemDef.name = "@gre@100M Cash Bag";
+                itemDef.itemActions[0] = "Claim";
+                itemDef.description = "Can be claimed for 100 Mill Coins";
+                itemDef.stackable = true;
+                break;
+
+            case 10835:
+                itemDef.name = "@gre@500M Cash Bag";
+                itemDef.itemActions[0] = "Claim";
+                itemDef.description = "Can be claimed for 500 Mill Coins";
+                itemDef.stackable = true;
+                break;
+            case 11188:
+                itemDef.name = "2x experience (1hr)";
+                itemDef.description = "This lamp will give clan members double experience for a random skill for 1 hour.";
+                break;
+            case 11189:
+                itemDef.name = "2x experience (3hr)";
+                itemDef.description = "This lamp will give clan members double experience for a random skill for 3 hour.";
+                break;
+            case 11679:
+                itemDef.name = "2x experience (5hr)";
+                itemDef.description = "This lamp will give clan members double experience for a random skill for 5 hour.";
+                break;
+            case 11187:
+                itemDef.name = "250k experience lamp";
+                itemDef.description = "This lamp will give clan members 250,000 experience for a random skill.";
+                break;
+            case 4447:
+                itemDef.name = "500k experience lamp";
+                itemDef.description = "This lamp will give clan members 500,000 experience for a random skill.";
+                break;
+            case 6543:
+                itemDef.name = "Drop rate increase (1.5x)";
+                itemDef.description = "This lamp will give clan members a 1x drop rate increase for a random boss. (15min)";
+                break;
+            case 7498:
+                itemDef.name = "Drop rate increase (2x)";
+                itemDef.description = "This lamp will give clan members a 3x drop rate increase for a random boss. (15min)";
+                break;
+            case 11137:
+                itemDef.name = "Drop rate increase (2.5x)";
+                itemDef.description = "This lamp will give clan members a 5x drop rate increase for a random boss. (15min)";
+                break;
+            case 11139:
+                itemDef.name = "2x resource (15min)";
+                itemDef.description = "This lamp will give clan members double resource rewards for 15 minutes.";
+                break;
+            case 12690://Armour sets
+            case 12873:
+            case 12875:
+            case 12877:
+            case 12879:
+            case 12881:
+            case 12883:
+            case 12962:
+            case 12972:
+            case 12974:
+            case 12984:
+            case 12986:
+            case 12988:
+            case 12990:
+            case 13000:
+            case 13002:
+            case 13012:
+            case 13014:
+            case 13024:
+            case 13026:
+            case 11738:
+            case 9666:
+            case 9670:
+            case 12865:
+            case 12867:
+            case 12869:
+            case 12871:
+            case 12966:
+            case 12964:
+            case 12968:
+            case 12970:
+            case 12976:
+            case 12978:
+            case 12980:
+            case 12982:
+            case 12992:
+            case 12994:
+            case 12996:
+            case 12998:
+            case 13004:
+            case 13006:
+            case 13008:
+            case 13010:
+            case 13016:
+            case 13018:
+            case 13020:
+            case 13022:
+            case 13028:
+            case 13030:
+            case 13032:
+            case 13034:
+            case 13036:
+            case 13038:
+            case 12960:
+            case 13173:
+            case 13175:
+            case 13064:
+            case 13066:
+                itemDef.itemActions = new String[5];
+                itemDef.itemActions[0] = "Unpack";
+                break;
         }
 
-
-        if (itemDef.certTemplateID != -1) {
+        if (itemDef.certTemplateID != -1)
             itemDef.toNote();
-        }
         return itemDef;
     }
+    
 
     private void toNote() {
         ItemDefinition noted = lookup(certTemplateID);

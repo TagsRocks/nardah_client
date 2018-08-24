@@ -17,7 +17,7 @@ public class RSInterface {
 	public static StreamLoader aClass44;
 	private static Cache aMRUNodes_238;
 	public TextDrawingArea textDrawingAreas;
-	public static RSInterface interfaceCache[];
+	private static RSInterface[] interfaceCache;
 	private static final Cache aMRUNodes_264 = new Cache(30);
 
 	/* Strings */
@@ -131,14 +131,14 @@ public class RSInterface {
 		Buffer stream = new Buffer(streamLoader.getDataForName("data"));
 		int i = -1;
 		stream.readUShort();
-		interfaceCache = new RSInterface[80_000];
+		setInterfaceCache(new RSInterface[80_000]);
 		while (stream.currentOffset < stream.buffer.length) {
 			int k = stream.readUShort();
 			if (k == 65535) {
 				i = stream.readUShort();
 				k = stream.readUShort();
 			}
-			RSInterface rsInterface = interfaceCache[k] = new RSInterface();
+			RSInterface rsInterface = getInterfaceCache()[k] = new RSInterface();
 			rsInterface.interfaceId = k;
 			rsInterface.parentID = i;
 			rsInterface.type = stream.readUByte();
@@ -366,7 +366,6 @@ public class RSInterface {
 		itemHoverBox(textDrawingAreas);
 		opponentStats(textDrawingAreas);
 		achievementPopup(textDrawingAreas);
-		refer(textDrawingAreas);
 		newAchievementTab(textDrawingAreas);
 		aMRUNodes_238 = null;
 	}
@@ -410,7 +409,7 @@ public class RSInterface {
         scroll.totalChildren(50);
         for (int i = 0; i < 50; ++i) {
         	addHoverText(37331 + i, "Achievement Name", "More Info", tda, 0, 0xff0000, 0xffffff, false, true, 140);
-        	interfaceCache[37331 + i].isAchievementText = true;
+        	getInterfaceCache()[37331 + i].isAchievementText = true;
         	scroll.child(i, 37331 + i, 3, 2 + (i * 14));
         }
         
@@ -434,65 +433,6 @@ public class RSInterface {
 	}
 	public boolean isAchievementText = false;
 	public int achievementPercent = 0;
-
-	public static void refer(TextDrawingArea[] tda) {
-		RSInterface tab = addInterface(59100);
-		String dir = "/Refer/SPRITE";
-		addSprite(59101, 0, dir);
-		addText(59105, "Referral", tda, 2, 0xFFA500, true, true);
-		addText(59106, "Name", tda, 1, 0xff9040, true, true);
-		addText(59109, "Referred By:", tda, 1, 0xff9040, false, true);
-		addText(59110, "Player Name", tda, 1, 0xFFA500, true, true);
-		addHoverButton(59095, dir, 7, 99, 23, "Confirm", -1, 59096, 1);
-		addHoveredButton(59096, dir, 8, 99, 23, 59097);
-		addText(59098, "Confirm", tda, 0, 65560, true, true);
-		addText(59099, "Rewards", tda, 1, 0xFFA500, false, true);
-		itemGroup(59093, 3, 3, 13, 5);
-		fill(59093);
-		int x = 10, y = 10;
-		tab.totalChildren(14);
-		tab.child(0, 59101, x, y);
-		tab.child(1, 36002, 464+x, 4+y);
-		tab.child(2, 36003, 464+x, 4+y);
-		tab.child(3, 59105, 243+x, 4+y);
-		tab.child(4, 59115, 13+x, 49+y);
-		tab.child(5, 59106, 106+x, 31+y);
-		tab.child(6, 59108, 81+x, 265+y);
-		tab.child(7, 59109, 319+x, 56+y);
-		tab.child(8, 59110, 387+x, 74+y);
-		tab.child(9, 59095, 345+x, 264+y);
-		tab.child(10, 59096, 345+x, 264+y);
-		tab.child(11, 59098, 395+x, 269+y);
-		tab.child(12, 59099, 338+x, 107+y);
-		tab.child(13, 59093, 331+x, 130+y);
-
-		RSInterface scroll = addInterface(59115);
-		scroll.totalChildren(400);
-		int yy = 0; int child = 0; int sprite = 3;
-		for (int i = 0; i < 100; i++) {
-			addHoverButton(59116 + i, dir, sprite, 566, 16, "Select", -1, 59216 + i, 1);
-			addHoveredButton(59216 + i, dir, 4, 566, 16, 59316 + i);
-			addText(59416 + i, ""+(i + 1)+":", tda, 0, 0xffffff, false, true);
-			addText(59516 + i, "Player Name", tda, 0, 0xffffff, false, true);
-			scroll.child(child++, 59116+i, 0, yy);
-			scroll.child(child++, 59216+i, 0, yy);
-			scroll.child(child++, 59416+i, 4, yy + 2);
-			scroll.child(child++, 59516+i, 60, yy + 2);
-			if (sprite == 3)
-				sprite = 5;
-			else
-				sprite = 3;
-			yy += 16;
-		}
-		scroll.width = 270;
-		scroll.height = 211;
-		scroll.scrollMax = yy;
-		addInputField(59108, 15, 0xffffff, "Enter name", 140, 24, false);
-
-	}
-
-
-
 
 	public static void achievementPopup(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(36000);
@@ -563,7 +503,7 @@ public class RSInterface {
 	}
 
 	public static void fill(int a) {
-		RSInterface f = interfaceCache[a];
+		RSInterface f = getInterfaceCache()[a];
 		for (int i = 0; i < f.inv.length; i++) {
 			f.inv[i] = 1039;
 			f.invStackSizes[i] = 1;
@@ -681,7 +621,7 @@ public class RSInterface {
 
 
 	private static void editAncientsTab(TextDrawingArea[] tda) {
-		RSInterface rsi = interfaceCache[12855];
+		RSInterface rsi = getInterfaceCache()[12855];
 
 		//Smoke barrage
 		rsi.childX[22] = 21;
@@ -799,17 +739,17 @@ public class RSInterface {
 	}
 
 	private static void cheapHackCodeGoesHere() {
-		RSInterface crumbleUndead = interfaceCache[19843];
+		RSInterface crumbleUndead = getInterfaceCache()[19843];
 		crumbleUndead.children = cheaphackftw(crumbleUndead.children);
 		crumbleUndead.childX = cheaphackftw(crumbleUndead.childX);
 		crumbleUndead.childY = cheaphackftw(crumbleUndead.childY);
 
-		RSInterface lvl49 = interfaceCache[20065];
+		RSInterface lvl49 = getInterfaceCache()[20065];
 		lvl49.children = cheaphackftw(lvl49.children);
 		lvl49.childX = cheaphackftw(lvl49.childX);
 		lvl49.childY = cheaphackftw(lvl49.childY);
 
-		RSInterface lvl56 = interfaceCache[20285];
+		RSInterface lvl56 = getInterfaceCache()[20285];
 		lvl56.children = cheaphackftw(lvl56.children);
 		lvl56.childX = cheaphackftw(lvl56.childX);
 		lvl56.childY = cheaphackftw(lvl56.childY);
@@ -840,11 +780,11 @@ public class RSInterface {
 	}
 
 	private static void repositionModernSpells() {
-		interfaceCache[19210].tooltip = "</col>Teleport @gre@Home";
-		interfaceCache[19220].disabledMessage = "Teleport to Edgeville";
-		interfaceCache[19222].disabledMessage = "Teleports you to Edgeville";
+		getInterfaceCache()[19210].tooltip = "</col>Teleport @gre@Home";
+		getInterfaceCache()[19220].disabledMessage = "Teleport to Edgeville";
+		getInterfaceCache()[19222].disabledMessage = "Teleports you to Edgeville";
 
-		RSInterface rsi = RSInterface.interfaceCache[12424];
+		RSInterface rsi = RSInterface.getInterfaceCache()[12424];
 		for (int index = 0; index < rsi.children.length; index++) {
 			switch (rsi.children[index]) {
 				case 1185:
@@ -894,8 +834,8 @@ public class RSInterface {
 		String[] names = new String[]{"Attack", "Hitpoints", "Strength", "Defence", "Ranged", "Prayer", "Magic"};
 		for (int id : ids) {
 			String name = names[next++];
-			int child = interfaceCache[3917].children[id];
-			interfaceCache[child].tooltip = "Set @or1@" + name + "@whi@ level";
+			int child = getInterfaceCache()[3917].children[id];
+			getInterfaceCache()[child].tooltip = "Set @or1@" + name + "@whi@ level";
 		}
 	}
 
@@ -974,7 +914,7 @@ public class RSInterface {
 
 
 	public static void addNpc(int ID, int npcId, int zoom) {
-		RSInterface petCanvas = interfaceCache[ID] = new RSInterface();
+		RSInterface petCanvas = getInterfaceCache()[ID] = new RSInterface();
 		petCanvas.interfaceId = ID;
 		petCanvas.parentID = ID;
 		petCanvas.type = 6;
@@ -1125,19 +1065,19 @@ public class RSInterface {
 	}
 
 	private static void findFreeSlots() {
-		for (int i = 0; i < interfaceCache.length; i++) {
-			if (Configuration.DEBUG_INTERFACES && interfaceCache[i] == null) {
+		for (int i = 0; i < getInterfaceCache().length; i++) {
+			if (Configuration.DEBUG_INTERFACES && getInterfaceCache()[i] == null) {
 				System.out.println("free slot: " + i);
 			}
 		}
 	}
 
 	private static RSInterface createInterface(int id) {
-		if (Configuration.DEBUG_INTERFACES && interfaceCache[id] != null) {
+		if (Configuration.DEBUG_INTERFACES && getInterfaceCache()[id] != null) {
 			System.out.println("overwritten interface: " + id);
 		}
 		RSInterface rsi = new RSInterface();
-		interfaceCache[id] = rsi;
+		getInterfaceCache()[id] = rsi;
 		return rsi;
 	}
 
@@ -1706,7 +1646,7 @@ public class RSInterface {
 	}
 
 	protected static void addOldPrayer(int id, String prayerName) {
-		RSInterface rsi = interfaceCache[id];
+		RSInterface rsi = getInterfaceCache()[id];
 		rsi.tooltip = "Toggle@or2@ " + prayerName;
 	}
 
@@ -1820,6 +1760,14 @@ public class RSInterface {
 		tab.enabledSprite = Client.spriteCache.get(k);
 	}
 
+	public static RSInterface[] getInterfaceCache() {
+		return interfaceCache;
+	}
+
+	public static void setInterfaceCache(RSInterface[] interfaceCache) {
+		RSInterface.interfaceCache = interfaceCache;
+	}
+
 	/* Swap Inventory */
 	public void swapInventoryItems(int i, int j) {
 		int k = inv[i];
@@ -1832,7 +1780,7 @@ public class RSInterface {
 
 	/* Text Size */
 	public static void textSize(int id, TextDrawingArea tda[], int idx) {
-		RSInterface rsi = interfaceCache[id];
+		RSInterface rsi = getInterfaceCache()[id];
 		rsi.textDrawingAreas = tda[idx];
 	}
 
@@ -2072,7 +2020,7 @@ public class RSInterface {
 
 	/* Special Bar */
 	public static void specialBarSprite(int id, int sprite) {
-		RSInterface class9 = interfaceCache[id];
+		RSInterface class9 = getInterfaceCache()[id];
 		class9.disabledSprite = CustomSpriteLoader(sprite, "");
 	}
 
@@ -2081,10 +2029,10 @@ public class RSInterface {
 		for (int i = id - 11; i < id; i++) {
 			removeSomething(i);
 		}
-		RSInterface rsi = interfaceCache[id - 12];
+		RSInterface rsi = getInterfaceCache()[id - 12];
 		rsi.width = 150;
 		rsi.height = 26;
-		rsi = interfaceCache[id];
+		rsi = getInterfaceCache()[id];
 		rsi.width = 150;
 		rsi.height = 26;
 		rsi.child(0, id - 12, 0, 0);
@@ -2093,11 +2041,11 @@ public class RSInterface {
 		for (int i = 13; i < 23; i++) {
 			rsi.childY[i] -= 1;
 		}
-		rsi = interfaceCache[id + 1];
+		rsi = getInterfaceCache()[id + 1];
 		rsi.type = 5;
 		rsi.disabledSprite = CustomSpriteLoader(7600, "");
 		for (int i = id + 2; i < id + 12; i++) {
-			rsi = interfaceCache[i];
+			rsi = getInterfaceCache()[i];
 			rsi.type = 5;
 		}
 		specialBarSprite(id + 2, 7601);
@@ -2814,7 +2762,7 @@ public class RSInterface {
 		rsi.totalChildren(2, 2, 2);
 		rsi.child(0, 3983, 52, 25);
 		rsi.child(1, 150, 21, 153);
-		rsi = interfaceCache[3983];
+		rsi = getInterfaceCache()[3983];
 		rsi.centerText = true;
 		rsi.textColor = 0xff981f;
 	}
@@ -2866,7 +2814,7 @@ public class RSInterface {
 		frame++;
 
 		for (int i = id2 + 3; i < id2 + 7; i++) {
-			rsi = interfaceCache[i];
+			rsi = getInterfaceCache()[i];
 			rsi.disabledSprite = CustomSpriteLoader(19301, "");
 			rsi.enabledSprite = CustomSpriteLoader(19301, "a");
 			rsi.width = 68;
@@ -2918,7 +2866,7 @@ public class RSInterface {
 		frame++;
 
 		for (int i = id2 + 3; i < id2 + 7; i++) {
-			rsi = interfaceCache[i];
+			rsi = getInterfaceCache()[i];
 			rsi.disabledSprite = CustomSpriteLoader(19301, "");
 			rsi.enabledSprite = CustomSpriteLoader(19301, "a");
 			rsi.width = 68;
@@ -2965,7 +2913,7 @@ public class RSInterface {
 		frame++;
 
 		for (int i = id2 + 3; i < id2 + 6; i++) {
-			rsi = interfaceCache[i];
+			rsi = getInterfaceCache()[i];
 			rsi.disabledSprite = CustomSpriteLoader(19301, "");
 			rsi.enabledSprite = CustomSpriteLoader(19301, "a");
 			rsi.width = 68;

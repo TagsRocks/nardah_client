@@ -108,7 +108,7 @@ public class PrayerSystem {
 				positions[i.ordinal()] = i;
 			}
 		}
-		RSInterface tab = RSInterface.interfaceCache[5608];
+		RSInterface tab = RSInterface.getInterfaceCache()[5608];
 		tab.totalChildren(89);
 		int child = 0;
 		tab.child(child++, 687, 84, 241);

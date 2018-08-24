@@ -356,16 +356,16 @@ public class GameApplet extends Applet implements Runnable, MouseListener, Mouse
         int childID = 0;
         int tabInterfaceID = Client.tabInterfaceIDs[Client.tabID];
         if (tabInterfaceID != -1) {
-            RSInterface tab = RSInterface.interfaceCache[tabInterfaceID];
+            RSInterface tab = RSInterface.getInterfaceCache()[tabInterfaceID];
             offsetX = Client.frameMode == Client.ScreenMode.FIXED ? Client.frameWidth - 218 : (Client.frameMode == Client.ScreenMode.FIXED ? 28 : Client.frameWidth - 197);
             offsetY = Client.frameMode == Client.ScreenMode.FIXED ? Client.frameHeight - 298 : (Client.frameMode == Client.ScreenMode.FIXED ? 37 : Client.frameHeight - (Client.frameWidth >= 1000 ? 37 : 74) - 267);
 
             if (tab.children != null || tab.children.length != 0) {
                 for (int index = 0; index < tab.children.length; index++) {
-                    RSInterface tabChild = RSInterface.interfaceCache[tab.children[index]];
+                    RSInterface tabChild = RSInterface.getInterfaceCache()[tab.children[index]];
                     if (tabChild.children != null) {
                         for (int idx = 0; idx < tabChild.children.length; idx++) {
-                            RSInterface tabChild2 = RSInterface.interfaceCache[tabChild.children[idx]];
+                            RSInterface tabChild2 = RSInterface.getInterfaceCache()[tabChild.children[idx]];
                             if (tabChild2.dropDown != null && tabChild2.dropDown.isOpen() && tabChild2.dropDown.getOptions().length > 5) {
                                 canZoom = false;
                                 tabChild2.dropDown.scroll += rotation;
@@ -383,15 +383,15 @@ public class GameApplet extends Applet implements Runnable, MouseListener, Mouse
                         childID = index;
                         positionX = tab.childX[index];
                         positionY = tab.childY[index];
-                        width = RSInterface.interfaceCache[tab.children[index]].width;
-                        height = RSInterface.interfaceCache[tab.children[index]].height;
+                        width = RSInterface.getInterfaceCache()[tab.children[index]].width;
+                        height = RSInterface.getInterfaceCache()[tab.children[index]].height;
                         break;
                     }
                 }
             }
             if (mouseX > offsetX + positionX && mouseY > offsetY + positionY && mouseX < offsetX + positionX + width && mouseY < offsetY + positionY + height) {
                 canZoom = false;
-                RSInterface.interfaceCache[tab.children[childID]].scrollPosition += rotation * 30;
+                RSInterface.getInterfaceCache()[tab.children[childID]].scrollPosition += rotation * 30;
             } else {
                 canZoom = true;
             }
@@ -417,7 +417,7 @@ public class GameApplet extends Applet implements Runnable, MouseListener, Mouse
                     }
                 }
             }
-            RSInterface rsi = RSInterface.interfaceCache[Client.openInterfaceID];
+            RSInterface rsi = RSInterface.getInterfaceCache()[Client.openInterfaceID];
             if (Client.openInterfaceID == 60000) {
                 offsetX = Client.frameMode == Client.ScreenMode.FIXED ? 4 : (Client.frameWidth / 2) - 356;
                 offsetY = Client.frameMode == Client.ScreenMode.FIXED ? 4 : (Client.frameHeight / 2) - 230;
@@ -426,7 +426,7 @@ public class GameApplet extends Applet implements Runnable, MouseListener, Mouse
                 offsetY = Client.frameMode == Client.ScreenMode.FIXED ? 4 : y;
             }
             for (int index = 0; index < rsi.children.length; index++) {
-                RSInterface tabChild = RSInterface.interfaceCache[rsi.children[index]];
+                RSInterface tabChild = RSInterface.getInterfaceCache()[rsi.children[index]];
                 if (tabChild.dropDown != null && tabChild.dropDown.isOpen() && tabChild.dropDown.getOptions().length > 5) {
                     tabChild.dropDown.scroll += rotation;
                     if (tabChild.dropDown.scroll >= tabChild.dropDown.getOptions().length - 5) {
@@ -441,25 +441,25 @@ public class GameApplet extends Applet implements Runnable, MouseListener, Mouse
                     childID = index;
                     positionX = rsi.childX[index];
                     positionY = rsi.childY[index];
-                    width = RSInterface.interfaceCache[rsi.children[index]].width;
-                    height = RSInterface.interfaceCache[rsi.children[index]].height;
+                    width = RSInterface.getInterfaceCache()[rsi.children[index]].width;
+                    height = RSInterface.getInterfaceCache()[rsi.children[index]].height;
                     break;
                 }
 
             }
 
             if ((mouseX > (offsetX + positionX)) && (mouseY > (offsetY + positionY)) && (mouseX < (offsetX + positionX + width)) && (mouseY < (offsetY + positionY + height))) {
-                if (RSInterface.interfaceCache[rsi.children[childID]].scrollPosition > 0) {
-                    RSInterface.interfaceCache[rsi.children[childID]].scrollPosition += rotation * rsi.scrollSpeed;
-                    if (RSInterface.interfaceCache[rsi.children[childID]].scrollPosition < 0) {
-                        RSInterface.interfaceCache[rsi.children[childID]].scrollPosition = 0;
+                if (RSInterface.getInterfaceCache()[rsi.children[childID]].scrollPosition > 0) {
+                    RSInterface.getInterfaceCache()[rsi.children[childID]].scrollPosition += rotation * rsi.scrollSpeed;
+                    if (RSInterface.getInterfaceCache()[rsi.children[childID]].scrollPosition < 0) {
+                        RSInterface.getInterfaceCache()[rsi.children[childID]].scrollPosition = 0;
                     }
                     return;
                 } else {
                     if (rotation > 0) {
-                        RSInterface.interfaceCache[rsi.children[childID]].scrollPosition += rotation * rsi.scrollSpeed;
-                        if (RSInterface.interfaceCache[rsi.children[childID]].scrollPosition > RSInterface.interfaceCache[rsi.children[childID]].scrollMax) {
-                            RSInterface.interfaceCache[rsi.children[childID]].scrollPosition = RSInterface.interfaceCache[rsi.children[childID]].scrollMax;
+                        RSInterface.getInterfaceCache()[rsi.children[childID]].scrollPosition += rotation * rsi.scrollSpeed;
+                        if (RSInterface.getInterfaceCache()[rsi.children[childID]].scrollPosition > RSInterface.getInterfaceCache()[rsi.children[childID]].scrollMax) {
+                            RSInterface.getInterfaceCache()[rsi.children[childID]].scrollPosition = RSInterface.getInterfaceCache()[rsi.children[childID]].scrollMax;
                         }
                         return;
                     }

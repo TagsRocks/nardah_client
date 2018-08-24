@@ -10,7 +10,7 @@ package com.nardah;
 public class CustomInterface extends RSInterface {
 
     static void misc() {
-        RSInterface energy = interfaceCache[149];
+        RSInterface energy = getInterfaceCache()[149];
         energy.textColor = 0xff9933;
     }
 
@@ -438,12 +438,12 @@ public class CustomInterface extends RSInterface {
         RSInterface hold = addInterface(id + 8);
         itemGroup(id + 9, boss.loot.length, 1, 10, 0);
         for (int i = 0; i < boss.loot.length; ++i) {
-            interfaceCache[id+9].inv[i] = boss.loot[i][0] + 1;
-            interfaceCache[id+9].invStackSizes[i] = boss.loot[i][1];
+            getInterfaceCache()[id+9].inv[i] = boss.loot[i][0] + 1;
+            getInterfaceCache()[id+9].invStackSizes[i] = boss.loot[i][1];
         }
-        interfaceCache[id+9].parentID = id + 8;
-        interfaceCache[id+9].contentType = 1430;
-        interfaceCache[id+9].scrollMax = ((boss.loot.length * 32) + (boss.loot.length * interfaceCache[id+9].invSpritePadX)) - 174;
+        getInterfaceCache()[id+9].parentID = id + 8;
+        getInterfaceCache()[id+9].contentType = 1430;
+        getInterfaceCache()[id+9].scrollMax = ((boss.loot.length * 32) + (boss.loot.length * getInterfaceCache()[id+9].invSpritePadX)) - 174;
         hold.width = 174;
         hold.height = 50;
 
@@ -500,6 +500,7 @@ public class CustomInterface extends RSInterface {
         tab.child(6, 41710, 188, 84);
         tab.child(7, 41711, 105, 154);
     }
+
 
     private static void mysteryBox(TextDrawingArea[] TDA) {
         RSInterface rsinterface = addInterface(59500);
@@ -597,7 +598,6 @@ public class CustomInterface extends RSInterface {
         rsinterface.child(44, 59547, 441, 275);
         rsinterface.child(45, 59512, 35, 278);
         rsinterface.child(46, 59514, 248, 266);
-
         RSInterface typeScroll = addTabInterface(59580);
         typeScroll.scrollPosition = 0;
         typeScroll.contentType = 0;
@@ -1745,19 +1745,19 @@ public class CustomInterface extends RSInterface {
         addText(36303, "We all love you.", 0xFFB83F, true, true, -1, tda, 0);
         addText(36304, "Keep doing what your doing!", 0xff9933, true, true, -1, tda, 0);
         rsi.totalChildren(18);
-        rsi.child(0, RSInterface.interfaceCache[36700].children[0], 37, 8);
-        rsi.child(1, RSInterface.interfaceCache[36700].children[1], 449, 20);
-        rsi.child(2, RSInterface.interfaceCache[36700].children[2], 449, 20);
-        rsi.child(3, RSInterface.interfaceCache[36700].children[3], 270, 20);
-        rsi.child(4, RSInterface.interfaceCache[36700].children[4], 68, 16);
-        rsi.child(5, RSInterface.interfaceCache[36700].children[5], 164, 48);
-        rsi.child(6, RSInterface.interfaceCache[36700].children[6], 266, 48);
-        rsi.child(7, RSInterface.interfaceCache[36700].children[7], 368, 48);
-        rsi.child(8, RSInterface.interfaceCache[36700].children[8], 212, 52);
-        rsi.child(9, RSInterface.interfaceCache[36700].children[9], 317, 52);
-        rsi.child(10, RSInterface.interfaceCache[36700].children[10], 417, 52);
-        rsi.child(11, RSInterface.interfaceCache[36700].children[11], -73, 48);
-        rsi.child(12, RSInterface.interfaceCache[36700].children[12], 95, 297);
+        rsi.child(0, RSInterface.getInterfaceCache()[36700].children[0], 37, 8);
+        rsi.child(1, RSInterface.getInterfaceCache()[36700].children[1], 449, 20);
+        rsi.child(2, RSInterface.getInterfaceCache()[36700].children[2], 449, 20);
+        rsi.child(3, RSInterface.getInterfaceCache()[36700].children[3], 270, 20);
+        rsi.child(4, RSInterface.getInterfaceCache()[36700].children[4], 68, 16);
+        rsi.child(5, RSInterface.getInterfaceCache()[36700].children[5], 164, 48);
+        rsi.child(6, RSInterface.getInterfaceCache()[36700].children[6], 266, 48);
+        rsi.child(7, RSInterface.getInterfaceCache()[36700].children[7], 368, 48);
+        rsi.child(8, RSInterface.getInterfaceCache()[36700].children[8], 212, 52);
+        rsi.child(9, RSInterface.getInterfaceCache()[36700].children[9], 317, 52);
+        rsi.child(10, RSInterface.getInterfaceCache()[36700].children[10], 417, 52);
+        rsi.child(11, RSInterface.getInterfaceCache()[36700].children[11], -73, 48);
+        rsi.child(12, RSInterface.getInterfaceCache()[36700].children[12], 95, 297);
         rsi.child(13, 36310, 60, 116);
         rsi.child(14, 36301, 317, 95);
         rsi.child(15, 36302, 317, 275);
@@ -1793,19 +1793,19 @@ public class CustomInterface extends RSInterface {
         addText(36503, "Abuse of these powers will end in <col=ff0000>severe</col> consequences", 0xFFB83F, true, true, -1, tda, 0);
         addText(36504, "All actions are logged and saved by the server", 0xff9933, true, true, -1, tda, 0);
         rsi.totalChildren(18);
-        rsi.child(0, RSInterface.interfaceCache[36700].children[0], 37, 8);
-        rsi.child(1, RSInterface.interfaceCache[36700].children[1], 449, 20);
-        rsi.child(2, RSInterface.interfaceCache[36700].children[2], 449, 20);
-        rsi.child(3, RSInterface.interfaceCache[36700].children[3], 270, 20);
-        rsi.child(4, RSInterface.interfaceCache[36700].children[4], 68, 16);
-        rsi.child(5, RSInterface.interfaceCache[36700].children[5], 164, 48);
-        rsi.child(6, RSInterface.interfaceCache[36700].children[6], 266, 48);
-        rsi.child(7, RSInterface.interfaceCache[36700].children[7], 368, 48);
-        rsi.child(8, RSInterface.interfaceCache[36700].children[8], 212, 52);
-        rsi.child(9, RSInterface.interfaceCache[36700].children[9], 317, 52);
-        rsi.child(10, RSInterface.interfaceCache[36700].children[10], 417, 52);
-        rsi.child(11, RSInterface.interfaceCache[36700].children[11], -73, 48);
-        rsi.child(12, RSInterface.interfaceCache[36700].children[12], 95, 297);
+        rsi.child(0, RSInterface.getInterfaceCache()[36700].children[0], 37, 8);
+        rsi.child(1, RSInterface.getInterfaceCache()[36700].children[1], 449, 20);
+        rsi.child(2, RSInterface.getInterfaceCache()[36700].children[2], 449, 20);
+        rsi.child(3, RSInterface.getInterfaceCache()[36700].children[3], 270, 20);
+        rsi.child(4, RSInterface.getInterfaceCache()[36700].children[4], 68, 16);
+        rsi.child(5, RSInterface.getInterfaceCache()[36700].children[5], 164, 48);
+        rsi.child(6, RSInterface.getInterfaceCache()[36700].children[6], 266, 48);
+        rsi.child(7, RSInterface.getInterfaceCache()[36700].children[7], 368, 48);
+        rsi.child(8, RSInterface.getInterfaceCache()[36700].children[8], 212, 52);
+        rsi.child(9, RSInterface.getInterfaceCache()[36700].children[9], 317, 52);
+        rsi.child(10, RSInterface.getInterfaceCache()[36700].children[10], 417, 52);
+        rsi.child(11, RSInterface.getInterfaceCache()[36700].children[11], -73, 48);
+        rsi.child(12, RSInterface.getInterfaceCache()[36700].children[12], 95, 297);
         rsi.child(13, 36510, 60, 116);
         rsi.child(14, 36501, 317, 95);
         rsi.child(15, 36502, 317, 275);
@@ -2029,20 +2029,20 @@ public class CustomInterface extends RSInterface {
 
         rsi.totalChildren(24);
         rsi.child(0, 46801, 8, 7);
-        rsi.child(1, RSInterface.interfaceCache[46700].children[1], 477, 14);
-        rsi.child(2, RSInterface.interfaceCache[46700].children[2], 477, 14);
+        rsi.child(1, RSInterface.getInterfaceCache()[46700].children[1], 477, 14);
+        rsi.child(2, RSInterface.getInterfaceCache()[46700].children[2], 477, 14);
         rsi.child(3, 46802, 255, 13);
-        rsi.child(4, RSInterface.interfaceCache[46700].children[4], 15, 30);
-        rsi.child(5, RSInterface.interfaceCache[46700].children[5], 117, 30);
-        rsi.child(6, RSInterface.interfaceCache[46700].children[6], 219, 30);
-        rsi.child(7, RSInterface.interfaceCache[46700].children[7], 321, 30);
-        rsi.child(8, RSInterface.interfaceCache[46700].children[8], 64, 36);
-        rsi.child(9, RSInterface.interfaceCache[46700].children[9], 166, 36);
-        rsi.child(10, RSInterface.interfaceCache[46700].children[10], 268, 36);
-        rsi.child(11, RSInterface.interfaceCache[46700].children[11], 370, 36);
-        rsi.child(12, RSInterface.interfaceCache[46700].children[12], 460, 34);
-        rsi.child(13, RSInterface.interfaceCache[46700].children[37], 460, 14);
-        rsi.child(14, RSInterface.interfaceCache[46700].children[38], 460, 14);
+        rsi.child(4, RSInterface.getInterfaceCache()[46700].children[4], 15, 30);
+        rsi.child(5, RSInterface.getInterfaceCache()[46700].children[5], 117, 30);
+        rsi.child(6, RSInterface.getInterfaceCache()[46700].children[6], 219, 30);
+        rsi.child(7, RSInterface.getInterfaceCache()[46700].children[7], 321, 30);
+        rsi.child(8, RSInterface.getInterfaceCache()[46700].children[8], 64, 36);
+        rsi.child(9, RSInterface.getInterfaceCache()[46700].children[9], 166, 36);
+        rsi.child(10, RSInterface.getInterfaceCache()[46700].children[10], 268, 36);
+        rsi.child(11, RSInterface.getInterfaceCache()[46700].children[11], 370, 36);
+        rsi.child(12, RSInterface.getInterfaceCache()[46700].children[12], 460, 34);
+        rsi.child(13, RSInterface.getInterfaceCache()[46700].children[37], 460, 14);
+        rsi.child(14, RSInterface.getInterfaceCache()[46700].children[38], 460, 14);
         rsi.child(15, 46803, 255, 85);
         rsi.child(16, 46804, 255, 100);
         rsi.child(17, 46805, 255, 125);
@@ -2060,21 +2060,21 @@ public class CustomInterface extends RSInterface {
         addText(46902, "Slayer Unlock", 0xff9933, true, true, -1, tda, 2);
         rsi.totalChildren(16);
         rsi.child(0, 46901, 8, 7);
-        rsi.child(1, RSInterface.interfaceCache[46700].children[1], 477, 11);
-        rsi.child(2, RSInterface.interfaceCache[46700].children[2], 477, 11);
+        rsi.child(1, RSInterface.getInterfaceCache()[46700].children[1], 477, 11);
+        rsi.child(2, RSInterface.getInterfaceCache()[46700].children[2], 477, 11);
         rsi.child(3, 46902, 255, 13);
-        rsi.child(4, RSInterface.interfaceCache[46700].children[4], 15, 30);
-        rsi.child(5, RSInterface.interfaceCache[46700].children[5], 117, 30);
-        rsi.child(6, RSInterface.interfaceCache[46700].children[6], 219, 30);
-        rsi.child(7, RSInterface.interfaceCache[46700].children[7], 321, 30);
-        rsi.child(8, RSInterface.interfaceCache[46700].children[8], 64, 36);
-        rsi.child(9, RSInterface.interfaceCache[46700].children[9], 166, 36);
-        rsi.child(10, RSInterface.interfaceCache[46700].children[10], 268, 36);
-        rsi.child(11, RSInterface.interfaceCache[46700].children[11], 370, 36);
-        rsi.child(12, RSInterface.interfaceCache[46700].children[12], 460, 34);
+        rsi.child(4, RSInterface.getInterfaceCache()[46700].children[4], 15, 30);
+        rsi.child(5, RSInterface.getInterfaceCache()[46700].children[5], 117, 30);
+        rsi.child(6, RSInterface.getInterfaceCache()[46700].children[6], 219, 30);
+        rsi.child(7, RSInterface.getInterfaceCache()[46700].children[7], 321, 30);
+        rsi.child(8, RSInterface.getInterfaceCache()[46700].children[8], 64, 36);
+        rsi.child(9, RSInterface.getInterfaceCache()[46700].children[9], 166, 36);
+        rsi.child(10, RSInterface.getInterfaceCache()[46700].children[10], 268, 36);
+        rsi.child(11, RSInterface.getInterfaceCache()[46700].children[11], 370, 36);
+        rsi.child(12, RSInterface.getInterfaceCache()[46700].children[12], 460, 34);
         rsi.child(13, 46910, -70, 72);
-        rsi.child(14, RSInterface.interfaceCache[46700].children[37], 460, 11);
-        rsi.child(15, RSInterface.interfaceCache[46700].children[38], 460, 11);
+        rsi.child(14, RSInterface.getInterfaceCache()[46700].children[37], 460, 11);
+        rsi.child(15, RSInterface.getInterfaceCache()[46700].children[38], 460, 11);
 
         RSInterface scrollInterface = addTabInterface(46910);
         scrollInterface.scrollPosition = 0;
@@ -2114,21 +2114,21 @@ public class CustomInterface extends RSInterface {
 
         rsi.totalChildren(16);
         rsi.child(0, 46501, 8, 7);
-        rsi.child(1, RSInterface.interfaceCache[46700].children[1], 477, 14);
-        rsi.child(2, RSInterface.interfaceCache[46700].children[2], 477, 14);
+        rsi.child(1, RSInterface.getInterfaceCache()[46700].children[1], 477, 14);
+        rsi.child(2, RSInterface.getInterfaceCache()[46700].children[2], 477, 14);
         rsi.child(3, 46502, 255, 13);
-        rsi.child(4, RSInterface.interfaceCache[46700].children[4], 15, 30);
-        rsi.child(5, RSInterface.interfaceCache[46700].children[5], 117, 30);
-        rsi.child(6, RSInterface.interfaceCache[46700].children[6], 219, 30);
-        rsi.child(7, RSInterface.interfaceCache[46700].children[7], 321, 30);
-        rsi.child(8, RSInterface.interfaceCache[46700].children[8], 64, 36);
-        rsi.child(9, RSInterface.interfaceCache[46700].children[9], 166, 36);
-        rsi.child(10, RSInterface.interfaceCache[46700].children[10], 268, 36);
-        rsi.child(11, RSInterface.interfaceCache[46700].children[11], 370, 36);
-        rsi.child(12, RSInterface.interfaceCache[46700].children[12], 460, 34);
+        rsi.child(4, RSInterface.getInterfaceCache()[46700].children[4], 15, 30);
+        rsi.child(5, RSInterface.getInterfaceCache()[46700].children[5], 117, 30);
+        rsi.child(6, RSInterface.getInterfaceCache()[46700].children[6], 219, 30);
+        rsi.child(7, RSInterface.getInterfaceCache()[46700].children[7], 321, 30);
+        rsi.child(8, RSInterface.getInterfaceCache()[46700].children[8], 64, 36);
+        rsi.child(9, RSInterface.getInterfaceCache()[46700].children[9], 166, 36);
+        rsi.child(10, RSInterface.getInterfaceCache()[46700].children[10], 268, 36);
+        rsi.child(11, RSInterface.getInterfaceCache()[46700].children[11], 370, 36);
+        rsi.child(12, RSInterface.getInterfaceCache()[46700].children[12], 460, 34);
         rsi.child(13, 46503, 45, 85);
-        rsi.child(14, RSInterface.interfaceCache[46700].children[37], 460, 14);
-        rsi.child(15, RSInterface.interfaceCache[46700].children[38], 460, 14);
+        rsi.child(14, RSInterface.getInterfaceCache()[46700].children[37], 460, 14);
+        rsi.child(15, RSInterface.getInterfaceCache()[46700].children[38], 460, 14);
     }
 
     public static void slayerConfirm(TextDrawingArea[] tda) {
@@ -2150,8 +2150,8 @@ public class CustomInterface extends RSInterface {
         rsi.totalChildren(14);
         rsi.child(0, 46401, 8, 7);
         rsi.child(1, 46402, 255, 11);
-        rsi.child(2, RSInterface.interfaceCache[46700].children[1], 477, 11);
-        rsi.child(3, RSInterface.interfaceCache[46700].children[2], 477, 11);
+        rsi.child(2, RSInterface.getInterfaceCache()[46700].children[1], 477, 11);
+        rsi.child(3, RSInterface.getInterfaceCache()[46700].children[2], 477, 11);
         rsi.child(4, 46403, 255, 115);
         rsi.child(5, 46404, 255, 140);
         rsi.child(6, 46405, 255, 175);
@@ -2177,8 +2177,8 @@ public class CustomInterface extends RSInterface {
         rsi.totalChildren(11);
         rsi.child(0, 46301, 116, 35);
         rsi.child(1, 46302, 245, 45);
-        rsi.child(2, RSInterface.interfaceCache[46700].children[1], 365, 44);
-        rsi.child(3, RSInterface.interfaceCache[46700].children[2], 365, 44);
+        rsi.child(2, RSInterface.getInterfaceCache()[46700].children[1], 365, 44);
+        rsi.child(3, RSInterface.getInterfaceCache()[46700].children[2], 365, 44);
         rsi.child(4, 46303, 348, 44);
         rsi.child(5, 46304, 348, 44);
         rsi.child(6, 46306, 160, 85);
@@ -2227,9 +2227,9 @@ public class CustomInterface extends RSInterface {
         addColorBox(56713, 0xff0000, 12, 12, false);
         addColorBox(56714, 0xff0000, 12, 12, false);
         addHDButton(56715, 462, "Select");
-        interfaceCache[56715].atActionType = 10;
+        getInterfaceCache()[56715].atActionType = 10;
         addButton(56716, 461, "Select");
-        interfaceCache[56716].atActionType = 10;
+        getInterfaceCache()[56716].atActionType = 10;
         addSprite(56717, 463);
         addColorBox(56718, 0xff0000, 133, 133, false);
         addText(56719, "Hello, this is a preview.", 0xFFFFFF, true, true, -1, tda, 0);
@@ -2540,9 +2540,9 @@ public class CustomInterface extends RSInterface {
     public static void simpleBounty(TextDrawingArea[] TDA) {
         RSInterface tab = addTabInterface(23400);
         tab.totalChildren(3);
-        tab.child(0, RSInterface.interfaceCache[23300].children[20], 460, 275);
-        tab.child(1, RSInterface.interfaceCache[23300].children[21], 473, 302);
-        tab.child(2, RSInterface.interfaceCache[23300].children[22], 473, 299);
+        tab.child(0, RSInterface.getInterfaceCache()[23300].children[20], 460, 275);
+        tab.child(1, RSInterface.getInterfaceCache()[23300].children[21], 473, 302);
+        tab.child(2, RSInterface.getInterfaceCache()[23300].children[22], 473, 299);
     }
 
     public static void bounty(TextDrawingArea[] TDA) {
@@ -3804,10 +3804,10 @@ public class CustomInterface extends RSInterface {
                 array = new int[]{5, 211, 0};
             }
             addHoverConfigButton(interfaceId + 32 + tab, interfaceId + 33 + tab, 193, 195, 39, 40, tab == 0 ? "View all" : "New tab", new int[]{1, tab / 4 == 0 ? 1 : 3}, new int[]{(tab / 4), 0}, new int[][]{{5, 211, 0}, array});
-            addHoveredConfigButton(interfaceCache[interfaceId + 32 + tab], interfaceId + 33 + tab, interfaceId + 34 + tab, 194, 195);
-            interfaceCache[interfaceId + 32 + tab].parentID = interfaceId;
-            interfaceCache[interfaceId + 33 + tab].parentID = interfaceId;
-            interfaceCache[interfaceId + 34 + tab].parentID = interfaceId;
+            addHoveredConfigButton(getInterfaceCache()[interfaceId + 32 + tab], interfaceId + 33 + tab, interfaceId + 34 + tab, 194, 195);
+            getInterfaceCache()[interfaceId + 32 + tab].parentID = interfaceId;
+            getInterfaceCache()[interfaceId + 33 + tab].parentID = interfaceId;
+            getInterfaceCache()[interfaceId + 34 + tab].parentID = interfaceId;
             bank.child(child++, interfaceId + 31 + tab, 55 + 40 * (tab / 4), 37);
             bank.child(child++, interfaceId + 32 + tab, 55 + 40 * (tab / 4), 37);
             bank.child(child++, interfaceId + 33 + tab, 55 + 40 * (tab / 4), 37);
@@ -3825,7 +3825,7 @@ public class CustomInterface extends RSInterface {
         addHoverButton(interfaceId + 14, 225, 35, 25, "Withdraw coins", -1, interfaceId + 15, 1);
         addHoveredButton(interfaceId + 15, 226, 35, 25, interfaceId + 16);
         addText(interfaceId + 17, "%1", tda, 0, 0xFE9624, true);
-        interfaceCache[interfaceId + 17].scripts = new int[][]{{22, 5382, 0}};
+        getInterfaceCache()[interfaceId + 17].scripts = new int[][]{{22, 5382, 0}};
         addText(interfaceId + 18, "360", tda, 0, 0xFF981F, true, true);
         addInputField(interfaceId + 19, 25, 0xFF981F, "Search...", 125, 22, false, true, "[A-Za-z0-9 ]");
         addHoverButton(interfaceId + 20, 298, 0, 0, "", -1, interfaceId + 21, 1);
@@ -3846,10 +3846,10 @@ public class CustomInterface extends RSInterface {
         addHoverButton(interfaceId + 78, "b:", 1, 35, 25, "Check vault", -1, interfaceId + 14, 1);
         addText(interfaceId + 79, "Bank value: 0", tda, 0, 0xFF981F, false, true);
         addText(interfaceId + 80, "Vault value: 0", tda, 0, 0xFF981F, false, true);
-        interfaceCache[5385].width += 22;
-        interfaceCache[5385].height -= 18;
-        interfaceCache[5385].scrollMax = 1444;
-        interfaceCache[5382].contentType = 206;
+        getInterfaceCache()[5385].width += 22;
+        getInterfaceCache()[5385].height -= 18;
+        getInterfaceCache()[5385].scrollMax = 1444;
+        getInterfaceCache()[5382].contentType = 206;
         bank.child(0, interfaceId + 1, 12, 2);
         bank.child(1, interfaceId + 2, 470, 12);
         bank.child(2, interfaceId + 3, 470, 12);
@@ -4416,7 +4416,7 @@ public class CustomInterface extends RSInterface {
     /** Displays all the players friends players. */
     private static void friendsTab(TextDrawingArea[] tda) {
         RSInterface tab = addTabInterface(5065);
-        RSInterface list = interfaceCache[5066];
+        RSInterface list = getInterfaceCache()[5066];
         addSprite(16126, 154);
         addSprite(16127, 155);
         addText(5067, "Friends List", tda, 1, 0xff9933, true, true);
@@ -4458,7 +4458,7 @@ public class CustomInterface extends RSInterface {
     /** Displays all the players ignored players. */
     private static void ignoreTab(TextDrawingArea[] tda) {
         RSInterface tab = addTabInterface(5715);
-        RSInterface list = interfaceCache[5716];
+        RSInterface list = getInterfaceCache()[5716];
         addText(5717, "Ignore List", tda, 1, 0xff9933, true, true);
         addText(5720, "", tda, 0, 0xff9933, true, true);
         addText(5721, "", tda, 0, 0xff9933, false, true);
@@ -4529,18 +4529,18 @@ public class CustomInterface extends RSInterface {
         tab.child(5, 15116, 420, 280);
         tab.child(6, 15117, 420, 300);
         tab.child(7, 15118, 420, 305);
-        tab.child(8, RSInterface.interfaceCache[1644].children[12], 400, 50);
-        tab.child(9, RSInterface.interfaceCache[1644].children[13], 360, 90);
-        tab.child(10, RSInterface.interfaceCache[1644].children[14], 400, 90);
-        tab.child(11, RSInterface.interfaceCache[1644].children[15], 440, 90);
-        tab.child(12, RSInterface.interfaceCache[1644].children[16], 345, 130);
-        tab.child(13, RSInterface.interfaceCache[1644].children[17], 400, 130);
-        tab.child(14, RSInterface.interfaceCache[1644].children[18], 455, 130);
-        tab.child(15, RSInterface.interfaceCache[1644].children[19], 400, 170);
-        tab.child(16, RSInterface.interfaceCache[1644].children[20], 400, 210);
-        tab.child(17, RSInterface.interfaceCache[1644].children[21], 345, 210);
-        tab.child(18, RSInterface.interfaceCache[1644].children[22], 455, 210);
-        tab.child(19, RSInterface.interfaceCache[1644].children[23], 346, 89);
+        tab.child(8, RSInterface.getInterfaceCache()[1644].children[12], 400, 50);
+        tab.child(9, RSInterface.getInterfaceCache()[1644].children[13], 360, 90);
+        tab.child(10, RSInterface.getInterfaceCache()[1644].children[14], 400, 90);
+        tab.child(11, RSInterface.getInterfaceCache()[1644].children[15], 440, 90);
+        tab.child(12, RSInterface.getInterfaceCache()[1644].children[16], 345, 130);
+        tab.child(13, RSInterface.getInterfaceCache()[1644].children[17], 400, 130);
+        tab.child(14, RSInterface.getInterfaceCache()[1644].children[18], 455, 130);
+        tab.child(15, RSInterface.getInterfaceCache()[1644].children[19], 400, 170);
+        tab.child(16, RSInterface.getInterfaceCache()[1644].children[20], 400, 210);
+        tab.child(17, RSInterface.getInterfaceCache()[1644].children[21], 345, 210);
+        tab.child(18, RSInterface.getInterfaceCache()[1644].children[22], 455, 210);
+        tab.child(19, RSInterface.getInterfaceCache()[1644].children[23], 346, 89);
         tab.child(20, 15112, 30, 45);
         tab.child(21, 15113, 30, 140);
         tab.child(22, 15114, 30, 235);
@@ -4567,7 +4567,7 @@ public class CustomInterface extends RSInterface {
      * and equipment screen.
      */
     public static void equipmentTab(TextDrawingArea[] wid) {
-        RSInterface Interface = interfaceCache[1644];
+        RSInterface Interface = getInterfaceCache()[1644];
         addSprite(15101, 0, "Interfaces/Equipment/bl");
         addSprite(15102, 1, "Interfaces/Equipment/bl");
         addSprite(15109, 2, "Interfaces/Equipment/bl");
@@ -5119,32 +5119,32 @@ public class CustomInterface extends RSInterface {
     }
 
     public static void duelEquipmentSlots(TextDrawingArea[] wid) {
-        RSInterface rsi = interfaceCache[35730];
+        RSInterface rsi = getInterfaceCache()[35730];
         rsi = addInterface(35730);
         rsi.totalChildren(23);
-        rsi.child(0, RSInterface.interfaceCache[6575].children[167], RSInterface.interfaceCache[6575].childX[167], RSInterface.interfaceCache[6575].childY[167]); // helm
-        rsi.child(1, RSInterface.interfaceCache[6575].children[168], RSInterface.interfaceCache[6575].childX[168], RSInterface.interfaceCache[6575].childY[168]); // cape
-        rsi.child(2, RSInterface.interfaceCache[6575].children[169], RSInterface.interfaceCache[6575].childX[169], RSInterface.interfaceCache[6575].childY[169]); // amulet
-        rsi.child(3, RSInterface.interfaceCache[6575].children[170], RSInterface.interfaceCache[6575].childX[170], RSInterface.interfaceCache[6575].childY[170]); // arrows
-        rsi.child(4, RSInterface.interfaceCache[6575].children[171], RSInterface.interfaceCache[6575].childX[171], RSInterface.interfaceCache[6575].childY[171]); // weapon
-        rsi.child(5, RSInterface.interfaceCache[6575].children[172], RSInterface.interfaceCache[6575].childX[172], RSInterface.interfaceCache[6575].childY[172]); // body
-        rsi.child(6, RSInterface.interfaceCache[6575].children[173], RSInterface.interfaceCache[6575].childX[173], RSInterface.interfaceCache[6575].childY[173]); // shield
-        rsi.child(7, RSInterface.interfaceCache[6575].children[174], RSInterface.interfaceCache[6575].childX[174], RSInterface.interfaceCache[6575].childY[174]); // legs
-        rsi.child(8, RSInterface.interfaceCache[6575].children[175], RSInterface.interfaceCache[6575].childX[175], RSInterface.interfaceCache[6575].childY[175]); // ring
-        rsi.child(9, RSInterface.interfaceCache[6575].children[176], RSInterface.interfaceCache[6575].childX[176], RSInterface.interfaceCache[6575].childY[176]); // boot
-        rsi.child(10, RSInterface.interfaceCache[6575].children[177], 189, 212);
-        rsi.child(11, RSInterface.interfaceCache[6575].children[178], 190, 94);
-        rsi.child(12, RSInterface.interfaceCache[6575].children[179], 246, 56);
-        rsi.child(13, RSInterface.interfaceCache[6575].children[180], 205, 96);
-        rsi.child(14, RSInterface.interfaceCache[6575].children[181], 247, 95);
-        rsi.child(15, RSInterface.interfaceCache[6575].children[182], 288, 96);
-        rsi.child(16, RSInterface.interfaceCache[6575].children[183], 191, 135);
-        rsi.child(17, RSInterface.interfaceCache[6575].children[184], 246, 135);
-        rsi.child(18, RSInterface.interfaceCache[6575].children[185], 301, 134);
-        rsi.child(19, RSInterface.interfaceCache[6575].children[186], 246, 174);
-        rsi.child(20, RSInterface.interfaceCache[6575].children[187], 190, 215);
-        rsi.child(21, RSInterface.interfaceCache[6575].children[188], 245, 214);
-        rsi.child(22, RSInterface.interfaceCache[6575].children[189], 302, 215);
+        rsi.child(0, RSInterface.getInterfaceCache()[6575].children[167], RSInterface.getInterfaceCache()[6575].childX[167], RSInterface.getInterfaceCache()[6575].childY[167]); // helm
+        rsi.child(1, RSInterface.getInterfaceCache()[6575].children[168], RSInterface.getInterfaceCache()[6575].childX[168], RSInterface.getInterfaceCache()[6575].childY[168]); // cape
+        rsi.child(2, RSInterface.getInterfaceCache()[6575].children[169], RSInterface.getInterfaceCache()[6575].childX[169], RSInterface.getInterfaceCache()[6575].childY[169]); // amulet
+        rsi.child(3, RSInterface.getInterfaceCache()[6575].children[170], RSInterface.getInterfaceCache()[6575].childX[170], RSInterface.getInterfaceCache()[6575].childY[170]); // arrows
+        rsi.child(4, RSInterface.getInterfaceCache()[6575].children[171], RSInterface.getInterfaceCache()[6575].childX[171], RSInterface.getInterfaceCache()[6575].childY[171]); // weapon
+        rsi.child(5, RSInterface.getInterfaceCache()[6575].children[172], RSInterface.getInterfaceCache()[6575].childX[172], RSInterface.getInterfaceCache()[6575].childY[172]); // body
+        rsi.child(6, RSInterface.getInterfaceCache()[6575].children[173], RSInterface.getInterfaceCache()[6575].childX[173], RSInterface.getInterfaceCache()[6575].childY[173]); // shield
+        rsi.child(7, RSInterface.getInterfaceCache()[6575].children[174], RSInterface.getInterfaceCache()[6575].childX[174], RSInterface.getInterfaceCache()[6575].childY[174]); // legs
+        rsi.child(8, RSInterface.getInterfaceCache()[6575].children[175], RSInterface.getInterfaceCache()[6575].childX[175], RSInterface.getInterfaceCache()[6575].childY[175]); // ring
+        rsi.child(9, RSInterface.getInterfaceCache()[6575].children[176], RSInterface.getInterfaceCache()[6575].childX[176], RSInterface.getInterfaceCache()[6575].childY[176]); // boot
+        rsi.child(10, RSInterface.getInterfaceCache()[6575].children[177], 189, 212);
+        rsi.child(11, RSInterface.getInterfaceCache()[6575].children[178], 190, 94);
+        rsi.child(12, RSInterface.getInterfaceCache()[6575].children[179], 246, 56);
+        rsi.child(13, RSInterface.getInterfaceCache()[6575].children[180], 205, 96);
+        rsi.child(14, RSInterface.getInterfaceCache()[6575].children[181], 247, 95);
+        rsi.child(15, RSInterface.getInterfaceCache()[6575].children[182], 288, 96);
+        rsi.child(16, RSInterface.getInterfaceCache()[6575].children[183], 191, 135);
+        rsi.child(17, RSInterface.getInterfaceCache()[6575].children[184], 246, 135);
+        rsi.child(18, RSInterface.getInterfaceCache()[6575].children[185], 301, 134);
+        rsi.child(19, RSInterface.getInterfaceCache()[6575].children[186], 246, 174);
+        rsi.child(20, RSInterface.getInterfaceCache()[6575].children[187], 190, 215);
+        rsi.child(21, RSInterface.getInterfaceCache()[6575].children[188], 245, 214);
+        rsi.child(22, RSInterface.getInterfaceCache()[6575].children[189], 302, 215);
     }
 
     private static void MasterMiner(TextDrawingArea[] tda) {
