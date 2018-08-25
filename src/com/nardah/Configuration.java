@@ -68,7 +68,7 @@ public class Configuration {
     public static final String[] RIGHT_NAV_LINKS = {"https://www.nardah.com/vote", "https://www.nardah.com/store/", "https://www.nardah.com/scores/"};
 
     /** The IP address client will be connecting to. */
-    public static Connection CONNECTION = Connection.ECONOMY;
+    public static Connection CONNECTION = Connection.DEVELOPMENT;
 
     /** The current version of the cache. */
     public static final int CACHE_VERSION = 5;

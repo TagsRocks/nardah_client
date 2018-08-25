@@ -9,15 +9,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="gson-2.8.5">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/deps/gson-2.8.5.jar!/" />
-          <root url="jar://$MODULE_DIR$/deps/guava-r05.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="gson-2.8.5" level="project" />
   </component>
 </module>
