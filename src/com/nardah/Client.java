@@ -377,6 +377,23 @@ public class Client extends GameApplet {
             SceneGraph.viewDistance = 9;
             Settings.GAMEFRAME = 474;
             instance.rebuildFrame(false, 765, 503, false, false);
+            /**
+             * Reset the settings
+             */
+            if (Client.changeChatArea) {
+                Client.changeChatArea = false;
+                toggleConfig(882, 0);
+            }
+
+            if (Client.transparentTabArea) {
+                Client.transparentTabArea = false;
+                toggleConfig(881, 0);
+            }
+
+            if (Client.changeTabArea) {
+                Client.changeTabArea = false;
+                toggleConfig(883, 0);
+            }
         }
 
         frameValueW = width;
@@ -6239,6 +6256,11 @@ public class Client extends GameApplet {
                     //Player commands
                     if (inputString.equals("::fps")) {
                         Settings.DISPLAY_FPS = !Settings.DISPLAY_FPS;
+                    }
+
+                    if (inputString.equals("::ethan")) {
+                        Client.changeChatArea = !Client.changeChatArea;
+                        toggleConfig(882, Client.changeChatArea ? 1 : 0);
                     }
 
                     if (inputString.equals("::ping")) {

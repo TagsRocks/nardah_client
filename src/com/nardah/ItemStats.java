@@ -14,7 +14,7 @@ public class ItemStats {
     public static final int MAGIC = 3;
     public static final int RANGED = 4;
     
-    public static ItemStats[] itemstats = new ItemStats[22000];
+    public static ItemStats[] itemstats = new ItemStats[22520];
     
     public int itemId;
     public int[] attackBonus;

@@ -59,7 +59,8 @@ public class Widget {
 			Raster.drawRectangle(x, y - dy, 65, 22, 0x000000, (alpha - 80) > 0 ? alpha - 80 : 0);
 			sprite.drawSprite1(x + 3, y - dy - sprite.height / 2 + 19 / 2 + 2, alpha);
 
-			Client.instance.newSmallFont.drawCenteredString(Utility.getFormattedTime(widget.seconds), x + 38, y + 16 - dy, 0xFF8C00, 0, textAlpha);
+			Client.instance.newSmallFont.drawCenteredString(Utility.getFormattedTime(widget.seconds), x + 38,
+					y + 16 - dy, 0xFF8C00, 0, textAlpha);
 
 			y -= 24;
 		}
@@ -172,6 +173,46 @@ public class Widget {
 			case 7:
 				submit(new Widget(time, 79));
 				break;
+			case 8: //OVERLOAD
+				submit(new Widget(time, 884));
+				break;
+			case 9: //STRENGTH
+				submit(new Widget(time, 885));
+				break;
+			case 10: //ATTACK
+				submit(new Widget(time, 358));
+				break;
+			case 11: //DEFENCE
+				submit(new Widget(time, 887));
+				break;
+			case 12: //RANGE
+				submit(new Widget(time, 359));
+				break;
+			case 13: //MAGIC
+				submit(new Widget(time, 360));
+				break;
+			case 14: //DOUBLE XP
+				submit(new Widget(time, 707));
+				break;
+			case 15: //POISON
+				submit(new Widget(time, 891));
+				break;
+			case 16: //FISHING POTION //BROKEN....
+				submit(new Widget(time, 892));
+				break;
+			case 18: //ANTI_VENOM POTION
+				submit(new Widget(time, 894));
+				break;
+			case 19: //SUPER ANTI VENOM+4
+				submit(new Widget(time, 895));
+				break;
+			case 17: //STAMINA POTION
+				submit(new Widget(time, 896));
+				break;
+			case 20: //AGILITY POTION
+				submit(new Widget(time, 897));
+				break;
+
 		}
 	}
 
