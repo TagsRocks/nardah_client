@@ -71,10 +71,10 @@ public class Configuration {
     public static Connection CONNECTION = Connection.DEVELOPMENT;
 
     /** The current version of the cache. */
-    public static final int CACHE_VERSION = 6;
+    public static final int CACHE_VERSION = 7;
 
     /** The current version of the client. */
-    public static final int CLIENT_VERSION = 8;
+    public static final int CLIENT_VERSION = 9;
 
     /** The current game version. */
     public static final int GAME_VERSION = CLIENT_VERSION + CACHE_VERSION;

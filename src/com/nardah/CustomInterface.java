@@ -695,7 +695,7 @@ public class CustomInterface extends RSInterface {
         addHoverButton(21307, 298, 172, 28, "View Latest Updates", -1, 21308, 1);
         addHoveredButton(21308, 780, 172, 28, 21309);
         //addHead(21310, 35, 35, 2500);
-        addHead(21342, 2, 306, 588, 35, 35, 900);
+        addHead(21342, 2, 1143, 588, 35, 35, 900);
         addText(21311, "WELCOME TO NARDAH!", 0xE9EBC5, true, true, 52, TDA, 3);
         addText(21312, "CLICK HERE TO PLAY", 0x008DFF, true, true, 52, TDA, 3);
         addText(21313, "View Latest Announcement", 0xC9C2BF, true, true, 52, TDA, 1);

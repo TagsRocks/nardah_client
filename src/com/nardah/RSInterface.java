@@ -781,8 +781,8 @@ public class RSInterface {
 
 	private static void repositionModernSpells() {
 		getInterfaceCache()[19210].tooltip = "</col>Teleport @gre@Home";
-		getInterfaceCache()[19220].disabledMessage = "Teleport to Edgeville";
-		getInterfaceCache()[19222].disabledMessage = "Teleports you to Edgeville";
+		getInterfaceCache()[19220].disabledMessage = "Teleport to Nardah";
+		getInterfaceCache()[19222].disabledMessage = "Teleports you to Nardah";
 
 		RSInterface rsi = RSInterface.getInterfaceCache()[12424];
 		for (int index = 0; index < rsi.children.length; index++) {
