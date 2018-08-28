@@ -516,36 +516,79 @@ public class CustomInterface extends RSInterface {
         addHoveredButton(59510, 392, 118, 32, 59511);
         addContainer(59512, 11, 10, 9, 15, false, true, false);
         addSprite(59514, 436);
+        /**
+         * Slot 1
+         */
         addConfigButton(59515, 59500, 298, 846, 15, 15, "", 0, 1, 430, false);
         addConfigButton(59516, 59500, 298, 847, 15, 15, "", 1, 1, 430, false);
         addConfigButton(59517, 59500, 298, 848, 15, 15, "", 2, 1, 430, false);
+
+        /**
+         * Slot 2
+         */
         addConfigButton(59518, 59500, 298, 846, 15, 15, "", 0, 1, 431, false);
         addConfigButton(59519, 59500, 298, 847, 15, 15, "", 1, 1, 431, false);
         addConfigButton(59520, 59500, 298, 848, 15, 15, "", 2, 1, 431, false);
+
+        /**
+         * Slot 3
+         */
         addConfigButton(59521, 59500, 298, 846, 15, 15, "", 0, 1, 432, false);
         addConfigButton(59522, 59500, 298, 847, 15, 15, "", 1, 1, 432, false);
         addConfigButton(59523, 59500, 298, 848, 15, 15, "", 2, 1, 432, false);
+
+        /**
+         * Slot 4
+         */
         addConfigButton(59524, 59500, 298, 846, 15, 15, "", 0, 1, 433, false);
         addConfigButton(59525, 59500, 298, 847, 15, 15, "", 1, 1, 433, false);
         addConfigButton(59526, 59500, 298, 848, 15, 15, "", 2, 1, 433, false);
+
+        /**
+         * Slot 5
+         */
         addConfigButton(59527, 59500, 298, 846, 15, 15, "", 0, 1, 434, false);
         addConfigButton(59528, 59500, 298, 847, 15, 15, "", 1, 1, 434, false);
         addConfigButton(59529, 59500, 298, 848, 15, 15, "", 2, 1, 434, false);
+
+        /**
+         * Slot 6
+         */
         addConfigButton(59530, 59500, 298, 846, 15, 15, "", 0, 1, 435, false);
         addConfigButton(59531, 59500, 298, 847, 15, 15, "", 1, 1, 435, false);
         addConfigButton(59532, 59500, 298, 848, 15, 15, "", 2, 1, 435, false);
+
+        /**
+         * Slot 7
+         */
         addConfigButton(59533, 59500, 298, 846, 15, 15, "", 0, 1, 436, false);
         addConfigButton(59534, 59500, 298, 847, 15, 15, "", 1, 1, 436, false);
         addConfigButton(59535, 59500, 298, 848, 15, 15, "", 2, 1, 436, false);
+
+        /**
+         * Slot 8
+         */
         addConfigButton(59536, 59500, 298, 846, 15, 15, "", 0, 1, 437, false);
         addConfigButton(59537, 59500, 298, 847, 15, 15, "", 1, 1, 437, false);
         addConfigButton(59538, 59500, 298, 848, 15, 15, "", 2, 1, 437, false);
+
+        /**
+         * Slot 9
+         */
         addConfigButton(59539, 59500, 298, 846, 15, 15, "", 0, 1, 438, false);
         addConfigButton(59540, 59500, 298, 847, 15, 15, "", 1, 1, 438, false);
         addConfigButton(59541, 59500, 298, 848, 15, 15, "", 2, 1, 438, false);
+
+        /**
+         * Slot 10
+         */
         addConfigButton(59542, 59500, 298, 846, 15, 15, "", 0, 1, 439, false);
         addConfigButton(59543, 59500, 298, 847, 15, 15, "", 1, 1, 439, false);
         addConfigButton(59544, 59500, 298, 848, 15, 15, "", 2, 1, 439, false);
+
+        /**
+         * Slot 11
+         */
         addConfigButton(59545, 59500, 298, 846, 15, 15, "", 0, 1, 440, false);
         addConfigButton(59546, 59500, 298, 847, 15, 15, "", 1, 1, 440, false);
         addConfigButton(59547, 59500, 298, 848, 15, 15, "", 2, 1, 440, false);
@@ -563,39 +606,51 @@ public class CustomInterface extends RSInterface {
         rsinterface.child(9, 59510, 196, 231);
         rsinterface.child(10, 59508, 258, 237);
         rsinterface.child(11, 59580, 5, 46);
+
         rsinterface.child(12, 59515, 31, 275);
         rsinterface.child(13, 59516, 31, 275);
         rsinterface.child(14, 59517, 31, 275);
+
         rsinterface.child(15, 59518, 72, 275);
         rsinterface.child(16, 59519, 72, 275);
         rsinterface.child(17, 59520, 72, 275);
+
         rsinterface.child(18, 59521, 113, 275);
         rsinterface.child(19, 59522, 113, 275);
         rsinterface.child(20, 59523, 113, 275);
+
         rsinterface.child(21, 59524, 154, 275);
         rsinterface.child(22, 59525, 154, 275);
         rsinterface.child(23, 59526, 154, 275);
+
         rsinterface.child(24, 59527, 195, 275);
         rsinterface.child(25, 59528, 195, 275);
         rsinterface.child(26, 59529, 195, 275);
+
         rsinterface.child(27, 59530, 236, 275);
         rsinterface.child(28, 59531, 236, 275);
         rsinterface.child(29, 59532, 236, 275);
+
         rsinterface.child(30, 59533, 277, 275);
         rsinterface.child(31, 59534, 277, 275);
         rsinterface.child(32, 59535, 277, 275);
+
         rsinterface.child(33, 59536, 318, 275);
         rsinterface.child(34, 59537, 318, 275);
         rsinterface.child(35, 59538, 318, 275);
+
         rsinterface.child(36, 59539, 359, 275);
         rsinterface.child(37, 59540, 359, 275);
         rsinterface.child(38, 59541, 359, 275);
+
         rsinterface.child(39, 59542, 400, 275);
         rsinterface.child(40, 59543, 400, 275);
         rsinterface.child(41, 59544, 400, 275);
+
         rsinterface.child(42, 59545, 441, 275);
         rsinterface.child(43, 59546, 441, 275);
         rsinterface.child(44, 59547, 441, 275);
+
         rsinterface.child(45, 59512, 35, 278);
         rsinterface.child(46, 59514, 248, 266);
         RSInterface typeScroll = addTabInterface(59580);
