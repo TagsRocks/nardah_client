@@ -68,13 +68,13 @@ public class Configuration {
     public static final String[] RIGHT_NAV_LINKS = {"https://www.nardah.com/vote", "https://www.nardah.com/store/", "https://www.nardah.com/scores/"};
 
     /** The IP address client will be connecting to. */
-    public static Connection CONNECTION = Connection.DEVELOPMENT;
+    public static Connection CONNECTION = Connection.ECONOMY;
 
     /** The current version of the cache. */
-    public static final int CACHE_VERSION = 7;
+    public static final int CACHE_VERSION = 8;
 
     /** The current version of the client. */
-    public static final int CLIENT_VERSION = 9;
+    public static final int CLIENT_VERSION = 10;
 
     /** The current game version. */
     public static final int GAME_VERSION = CLIENT_VERSION + CACHE_VERSION;
