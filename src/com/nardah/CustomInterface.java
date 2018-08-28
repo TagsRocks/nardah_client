@@ -521,79 +521,103 @@ public class CustomInterface extends RSInterface {
          */
         addConfigButton(59515, 59500, 298, 846, 15, 15, "", 0, 1, 430, false);
         addConfigButton(59516, 59500, 298, 847, 15, 15, "", 1, 1, 430, false);
-        addConfigButton(59517, 59500, 298, 848, 15, 15, "", 2, 1, 430, false);
+        addConfigButton(59517, 59500, 298, 899, 15, 15, "", 2, 1, 430, false);
+        addConfigButton(59518, 59500, 298, 848, 15, 15, "", 3, 1, 430, false);
+        addConfigButton(59519, 59500, 298, 898, 15, 15, "", 4, 1, 430, false);
 
         /**
          * Slot 2
          */
-        addConfigButton(59518, 59500, 298, 846, 15, 15, "", 0, 1, 431, false);
-        addConfigButton(59519, 59500, 298, 847, 15, 15, "", 1, 1, 431, false);
-        addConfigButton(59520, 59500, 298, 848, 15, 15, "", 2, 1, 431, false);
+        addConfigButton(59520, 59500, 298, 846, 15, 15, "", 0, 1, 431, false);
+        addConfigButton(59521, 59500, 298, 847, 15, 15, "", 1, 1, 431, false);
+        addConfigButton(59522, 59500, 298, 899, 15, 15, "", 2, 1, 431, false);
+        addConfigButton(59523, 59500, 298, 848, 15, 15, "", 3, 1, 431, false);
+        addConfigButton(59524, 59500, 298, 898, 15, 15, "", 4, 1, 431, false);
+
 
         /**
          * Slot 3
          */
-        addConfigButton(59521, 59500, 298, 846, 15, 15, "", 0, 1, 432, false);
-        addConfigButton(59522, 59500, 298, 847, 15, 15, "", 1, 1, 432, false);
-        addConfigButton(59523, 59500, 298, 848, 15, 15, "", 2, 1, 432, false);
+        addConfigButton(59525, 59500, 298, 846, 15, 15, "", 0, 1, 432, false);
+        addConfigButton(59526, 59500, 298, 847, 15, 15, "", 1, 1, 432, false);
+        addConfigButton(59527, 59500, 298, 899, 15, 15, "", 2, 1, 432, false);
+        addConfigButton(59528, 59500, 298, 848, 15, 15, "", 3, 1, 432, false);
+        addConfigButton(59529, 59500, 298, 898, 15, 15, "", 4, 1, 432, false);
 
         /**
          * Slot 4
          */
-        addConfigButton(59524, 59500, 298, 846, 15, 15, "", 0, 1, 433, false);
-        addConfigButton(59525, 59500, 298, 847, 15, 15, "", 1, 1, 433, false);
-        addConfigButton(59526, 59500, 298, 848, 15, 15, "", 2, 1, 433, false);
+        addConfigButton(59530, 59500, 298, 846, 15, 15, "", 0, 1, 433, false);
+        addConfigButton(59531, 59500, 298, 847, 15, 15, "", 1, 1, 433, false);
+        addConfigButton(59532, 59500, 298, 899, 15, 15, "", 2, 1, 433, false);
+        addConfigButton(59533, 59500, 298, 848, 15, 15, "", 3, 1, 433, false);
+        addConfigButton(59534, 59500, 298, 898, 15, 15, "", 4, 1, 433, false);
+
 
         /**
          * Slot 5
          */
-        addConfigButton(59527, 59500, 298, 846, 15, 15, "", 0, 1, 434, false);
-        addConfigButton(59528, 59500, 298, 847, 15, 15, "", 1, 1, 434, false);
-        addConfigButton(59529, 59500, 298, 848, 15, 15, "", 2, 1, 434, false);
+        addConfigButton(59535, 59500, 298, 846, 15, 15, "", 0, 1, 434, false);
+        addConfigButton(59536, 59500, 298, 847, 15, 15, "", 1, 1, 434, false);
+        addConfigButton(59537, 59500, 298, 899, 15, 15, "", 2, 1, 434, false);
+        addConfigButton(59538, 59500, 298, 848, 15, 15, "", 3, 1, 434, false);
+        addConfigButton(59539, 59500, 298, 898, 15, 15, "", 4, 1, 434, false);
 
         /**
          * Slot 6
          */
-        addConfigButton(59530, 59500, 298, 846, 15, 15, "", 0, 1, 435, false);
-        addConfigButton(59531, 59500, 298, 847, 15, 15, "", 1, 1, 435, false);
-        addConfigButton(59532, 59500, 298, 848, 15, 15, "", 2, 1, 435, false);
+        addConfigButton(59540, 59500, 298, 846, 15, 15, "", 0, 1, 435, false);
+        addConfigButton(59541, 59500, 298, 847, 15, 15, "", 1, 1, 435, false);
+        addConfigButton(59542, 59500, 298, 899, 15, 15, "", 2, 1, 435, false);
+        addConfigButton(59543, 59500, 298, 848, 15, 15, "", 3, 1, 435, false);
+        addConfigButton(59544, 59500, 298, 898, 15, 15, "", 4, 1, 435, false);
 
         /**
          * Slot 7
          */
-        addConfigButton(59533, 59500, 298, 846, 15, 15, "", 0, 1, 436, false);
-        addConfigButton(59534, 59500, 298, 847, 15, 15, "", 1, 1, 436, false);
-        addConfigButton(59535, 59500, 298, 848, 15, 15, "", 2, 1, 436, false);
+        addConfigButton(59545, 59500, 298, 846, 15, 15, "", 0, 1, 436, false);
+        addConfigButton(59546, 59500, 298, 847, 15, 15, "", 1, 1, 436, false);
+        addConfigButton(59547, 59500, 298, 899, 15, 15, "", 2, 1, 436, false);
+        addConfigButton(59548, 59500, 298, 848, 15, 15, "", 3, 1, 436, false);
+        addConfigButton(59549, 59500, 298, 898, 15, 15, "", 4, 1, 436, false);
 
         /**
          * Slot 8
          */
-        addConfigButton(59536, 59500, 298, 846, 15, 15, "", 0, 1, 437, false);
-        addConfigButton(59537, 59500, 298, 847, 15, 15, "", 1, 1, 437, false);
-        addConfigButton(59538, 59500, 298, 848, 15, 15, "", 2, 1, 437, false);
+        addConfigButton(59550, 59500, 298, 846, 15, 15, "", 0, 1, 437, false);
+        addConfigButton(59551, 59500, 298, 847, 15, 15, "", 1, 1, 437, false);
+        addConfigButton(59552, 59500, 298, 899, 15, 15, "", 2, 1, 437, false);
+        addConfigButton(59553, 59500, 298, 848, 15, 15, "", 3, 1, 437, false);
+        addConfigButton(59554, 59500, 298, 898, 15, 15, "", 4, 1, 437, false);
 
         /**
          * Slot 9
          */
-        addConfigButton(59539, 59500, 298, 846, 15, 15, "", 0, 1, 438, false);
-        addConfigButton(59540, 59500, 298, 847, 15, 15, "", 1, 1, 438, false);
-        addConfigButton(59541, 59500, 298, 848, 15, 15, "", 2, 1, 438, false);
+        addConfigButton(59555, 59500, 298, 846, 15, 15, "", 0, 1, 438, false);
+        addConfigButton(59556, 59500, 298, 847, 15, 15, "", 1, 1, 438, false);
+        addConfigButton(59557, 59500, 298, 899, 15, 15, "", 2, 1, 438, false);
+        addConfigButton(59558, 59500, 298, 848, 15, 15, "", 3, 1, 438, false);
+        addConfigButton(59559, 59500, 298, 898, 15, 15, "", 4, 1, 438, false);
 
         /**
          * Slot 10
          */
-        addConfigButton(59542, 59500, 298, 846, 15, 15, "", 0, 1, 439, false);
-        addConfigButton(59543, 59500, 298, 847, 15, 15, "", 1, 1, 439, false);
-        addConfigButton(59544, 59500, 298, 848, 15, 15, "", 2, 1, 439, false);
+        addConfigButton(59560, 59500, 298, 846, 15, 15, "", 0, 1, 439, false);
+        addConfigButton(59561, 59500, 298, 847, 15, 15, "", 1, 1, 439, false);
+        addConfigButton(59562, 59500, 298, 899, 15, 15, "", 2, 1, 439, false);
+        addConfigButton(59563, 59500, 298, 848, 15, 15, "", 3, 1, 439, false);
+        addConfigButton(59564, 59500, 298, 898, 15, 15, "", 4, 1, 439, false);
 
         /**
          * Slot 11
          */
-        addConfigButton(59545, 59500, 298, 846, 15, 15, "", 0, 1, 440, false);
-        addConfigButton(59546, 59500, 298, 847, 15, 15, "", 1, 1, 440, false);
-        addConfigButton(59547, 59500, 298, 848, 15, 15, "", 2, 1, 440, false);
+        addConfigButton(59565, 59500, 298, 846, 15, 15, "", 0, 1, 440, false);
+        addConfigButton(59566, 59500, 298, 847, 15, 15, "", 1, 1, 440, false);
+        addConfigButton(59567, 59500, 298, 899, 15, 15, "", 2, 1, 440, false);
+        addConfigButton(59568, 59500, 298, 848, 15, 15, "", 3, 1, 440, false);
+        addConfigButton(59569, 59500, 298, 898, 15, 15, "", 4, 1, 440, false);
 
-        rsinterface.totalChildren(47);
+        rsinterface.totalChildren(69);
         rsinterface.child(0, 59501, 25, 13);
         rsinterface.child(1, 59502, 258, 21);
         rsinterface.child(2, 32303, 460, 17);
@@ -610,49 +634,61 @@ public class CustomInterface extends RSInterface {
         rsinterface.child(12, 59515, 31, 275);
         rsinterface.child(13, 59516, 31, 275);
         rsinterface.child(14, 59517, 31, 275);
-
-        rsinterface.child(15, 59518, 72, 275);
-        rsinterface.child(16, 59519, 72, 275);
+        rsinterface.child(15, 59518, 31, 275);
+        rsinterface.child(16, 59519, 31, 275);
         rsinterface.child(17, 59520, 72, 275);
+        rsinterface.child(18, 59521, 72, 275);
+        rsinterface.child(19, 59522, 72, 275);
+        rsinterface.child(20, 59523, 72, 275);
+        rsinterface.child(21, 59524, 72, 275);
+        rsinterface.child(22, 59525, 113, 275);
+        rsinterface.child(23, 59526, 113, 275);
+        rsinterface.child(24, 59527, 113, 275);
+        rsinterface.child(25, 59528, 113, 275);
+        rsinterface.child(26, 59529, 113, 275);
+        rsinterface.child(27, 59530, 154, 275);
+        rsinterface.child(28, 59531, 154, 275);
+        rsinterface.child(29, 59532, 154, 275);
+        rsinterface.child(30, 59533, 154, 275);
+        rsinterface.child(31, 59534, 154, 275);
+        rsinterface.child(32, 59535, 195, 275);
+        rsinterface.child(33, 59536, 195, 275);
+        rsinterface.child(34, 59537, 195, 275);
+        rsinterface.child(35, 59538, 195, 275);
+        rsinterface.child(36, 59539, 195, 275);
+        rsinterface.child(37, 59540, 236, 275);
+        rsinterface.child(38, 59541, 236, 275);
+        rsinterface.child(39, 59542, 236, 275);
+        rsinterface.child(40, 59543, 236, 275);
+        rsinterface.child(41, 59544, 236, 275);
+        rsinterface.child(42, 59545, 277, 275);
+        rsinterface.child(43, 59546, 277, 275);
+        rsinterface.child(44, 59547, 277, 275);
+        rsinterface.child(45, 59548, 277, 275);
+        rsinterface.child(46, 59549, 277, 275);
+        rsinterface.child(47, 59550, 318, 275);
+        rsinterface.child(48, 59551, 318, 275);
+        rsinterface.child(49, 59552, 318, 275);
+        rsinterface.child(50, 59553, 318, 275);
+        rsinterface.child(51, 59554, 318, 275);
+        rsinterface.child(52, 59555, 359, 275);
+        rsinterface.child(53, 59556, 359, 275);
+        rsinterface.child(54, 59557, 359, 275);
+        rsinterface.child(55, 59558, 359, 275);
+        rsinterface.child(56, 59559, 359, 275);
+        rsinterface.child(57, 59560, 400, 275);
+        rsinterface.child(58, 59561, 400, 275);
+        rsinterface.child(59, 59562, 400, 275);
+        rsinterface.child(60, 59563, 400, 275);
+        rsinterface.child(61, 59564, 400, 275);
+        rsinterface.child(62, 59565, 441, 275);
+        rsinterface.child(63, 59566, 441, 275);
+        rsinterface.child(64, 59567, 441, 275);
+        rsinterface.child(65, 59568, 441, 275);
+        rsinterface.child(66, 59569, 441, 275);
 
-        rsinterface.child(18, 59521, 113, 275);
-        rsinterface.child(19, 59522, 113, 275);
-        rsinterface.child(20, 59523, 113, 275);
-
-        rsinterface.child(21, 59524, 154, 275);
-        rsinterface.child(22, 59525, 154, 275);
-        rsinterface.child(23, 59526, 154, 275);
-
-        rsinterface.child(24, 59527, 195, 275);
-        rsinterface.child(25, 59528, 195, 275);
-        rsinterface.child(26, 59529, 195, 275);
-
-        rsinterface.child(27, 59530, 236, 275);
-        rsinterface.child(28, 59531, 236, 275);
-        rsinterface.child(29, 59532, 236, 275);
-
-        rsinterface.child(30, 59533, 277, 275);
-        rsinterface.child(31, 59534, 277, 275);
-        rsinterface.child(32, 59535, 277, 275);
-
-        rsinterface.child(33, 59536, 318, 275);
-        rsinterface.child(34, 59537, 318, 275);
-        rsinterface.child(35, 59538, 318, 275);
-
-        rsinterface.child(36, 59539, 359, 275);
-        rsinterface.child(37, 59540, 359, 275);
-        rsinterface.child(38, 59541, 359, 275);
-
-        rsinterface.child(39, 59542, 400, 275);
-        rsinterface.child(40, 59543, 400, 275);
-        rsinterface.child(41, 59544, 400, 275);
-
-        rsinterface.child(42, 59545, 441, 275);
-        rsinterface.child(43, 59546, 441, 275);
-        rsinterface.child(44, 59547, 441, 275);
-
-        rsinterface.child(45, 59512, 35, 278);
-        rsinterface.child(46, 59514, 248, 266);
+        rsinterface.child(67, 59512, 35, 278);
+        rsinterface.child(68, 59514, 248, 266);
         RSInterface typeScroll = addTabInterface(59580);
         typeScroll.scrollPosition = 0;
         typeScroll.contentType = 0;
