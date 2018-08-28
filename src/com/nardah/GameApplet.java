@@ -17,7 +17,7 @@ public class GameApplet extends Applet implements Runnable, MouseListener, Mouse
     public LoginRenderer loginRenderer;
     Console console = new Console();
     private int anInt4;
-    private int delayTime;
+    protected int delayTime;
     private int minDelay;
     private final long aLongArray7[] = new long[10];
     int fps;

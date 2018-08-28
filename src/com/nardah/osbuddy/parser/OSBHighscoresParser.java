@@ -1,7 +1,6 @@
 package com.nardah.osbuddy.parser;
 
 
-import com.google.common.primitives.Doubles;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -100,13 +99,14 @@ public class OSBHighscoresParser {
     }
 
 
-    /** Calculates the combat level of an mob. */
+    /** Calculates the combat level of an actor. */
     private static double calculateCombat(int attack, int defence, int strength, int hp, int ranged, int prayer, int magic) {
         final double base_calculation = .25 * (defence + hp + Math.floor(prayer / 2));
         final double melee_calculation = .325 * (attack + strength);
         final double range_calculation = .325 * (Math.floor(ranged / 2) + ranged);
         final double magic_calculation = .325 * (Math.floor(magic / 2) + magic);
-        return Math.floor(base_calculation + Doubles.max(melee_calculation, range_calculation, magic_calculation));
+        return 0;//TODO: REMOVE TEMP.
+        //return Math.floor(base_calculation + Doubles.max(melee_calculation, range_calculation, magic_calculation));
     }
 
 

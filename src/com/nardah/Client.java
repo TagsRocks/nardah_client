@@ -32,6 +32,11 @@ public class Client extends GameApplet {
     private long regenSpecStart = 0;
     private int lastHp = 0;
     private int lastSpec = 0;
+    private int spinResult;
+    private int currentSpin;
+    private boolean spinning = false;
+    private int spinDelay = 1;
+    private long spinTime;
 	
 	
    /** Achievement shit added **/	
@@ -2052,7 +2057,7 @@ public class Client extends GameApplet {
         }
         for (int i1 = 0; i1 < npcCount; i1++)
             if (npcs[npcIndices[i1]] == null) {
-                Utility.reporterror(myUsername + " null entry in npc list - pos:" + i1 + " size:" + npcCount);
+                Utility.reporterror(myUsername + " null entry in mob list - pos:" + i1 + " size:" + npcCount);
                 throw new RuntimeException("eek");
             }
 
@@ -4663,7 +4668,7 @@ public class Client extends GameApplet {
             }
         }
 
-        // item on npc
+        // item on mob
         if (action == 582) {
             Npc npc = npcs[localPlayerIndex];
             if (npc != null) {
@@ -6977,7 +6982,7 @@ public class Client extends GameApplet {
                     model = Model.getModel(rsint.anInt256);
                     rotationOffsetY = 150;
                 } else if (rsint.anInt255 == 2) {
-                    // this will get the full npc model
+                    // this will get the full mob model
                     NpcDefinition npc = NpcDefinition.lookup(rsint.anInt256);
                     model = npc.getAnimatedModel(-1, -1, null);
                     // to only get the head you would use
@@ -10250,6 +10255,27 @@ public class Client extends GameApplet {
                         sprite = child.enabledSprite;
                     else
                         sprite = child.disabledSprite;
+                    if(spinning && child.interfaceId == 59514) {
+                        spinDelay = 300;
+                        float timeDif = (System.currentTimeMillis() - spinTime);
+                        int speed = (int) ((7800 - timeDif) / spinDelay);
+                        if(speed < 10)
+                            speed = 10;
+                        currentSpin += speed;
+                        if(currentSpin > 451)
+                            currentSpin = 0;
+                        if(speed <= 10 && timeDif > 7700) {
+                            int answ = (spinResult + 1) * 41 - 20;
+                            System.out.println(answ + " - " + currentSpin);
+                            if(answ - 10 < currentSpin && answ + 10 < currentSpin) {
+                                spinning = false;
+                                spinDelay = 300;
+                            }
+                        }
+                    }
+                    if(child.interfaceId == 59514) {
+                        childX += (currentSpin - 225);
+                    }
                     if (spellSelected == 1 && child.interfaceId == spellID && spellID != 0 && sprite != null) {
                         sprite.drawSprite(childX, childY, 0xffffff);
                     } else {
@@ -13448,6 +13474,14 @@ public class Client extends GameApplet {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
+                    opcode = -1;
+                    return true;
+                    
+                case 55:
+                    spinResult = incoming.readUByte();
+                    currentSpin = 0;
+                    spinning = true;
+                    spinTime = System.currentTimeMillis();
                     opcode = -1;
                     return true;
 

@@ -309,7 +309,7 @@ public final class NpcDefinition {
                 entityDef.actions[1] = "Talk-to";
                 break;
             case 315:
-                entityDef.actions = new String[5]; // Actions for the npc
+                entityDef.actions = new String[5]; // Actions for the mob
                 entityDef.actions[0] = "Talk-to";
                 entityDef.actions[2] = "Trade";
                 entityDef.modelId = new int[11]; //Number of models it uses
@@ -374,7 +374,7 @@ public final class NpcDefinition {
                 entityDef.modelId[7] = 29622;
                 break;
             case 367:
-                entityDef.actions = new String[5]; // Actions for the npc
+                entityDef.actions = new String[5]; // Actions for the mob
                 entityDef.modelId = new int[9]; //Number of models it uses
                 entityDef.modelId[0] = 27636; //Bandos chest
                 entityDef.modelId[1] = 27625; //Tassets
@@ -690,7 +690,7 @@ public final class NpcDefinition {
             } else if (opcode == 107 || opcode == 111) {
 
             } else {
-                System.out.println(String.format("npc def invalid opcode: %d", opcode));
+                System.out.println(String.format("mob def invalid opcode: %d", opcode));
             }
         }
     }

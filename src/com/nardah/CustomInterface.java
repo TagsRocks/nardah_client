@@ -1295,7 +1295,7 @@ public class CustomInterface extends RSInterface {
         addText(26806, "King Black Dragon:", tda, 0, 0xFF9900, true, true);
         addText(26807, "Drops: 35", tda, 0, 0xFF9900, true, true);
         addText(26808, "Load Time: 2 seconds", tda, 0, 0xFF9900, true, true);
-        addInputField(26810, 15, 0xFF981F, "Search for npc", 121, 23, false, false, "[A-Za-z0-9 ]");
+        addInputField(26810, 15, 0xFF981F, "Search for mob", 121, 23, false, false, "[A-Za-z0-9 ]");
         addInputField(26811, 7, 0xFF981F, "Simulation amount", 100, 20, false, false, "[0-9]");
         addDropdownMenu(26811, 136, 0, false, true, Dropdown.DEFAULT, "10", "100", "1,000", "10,000", "100,000");
         tab.totalChildren(11);
