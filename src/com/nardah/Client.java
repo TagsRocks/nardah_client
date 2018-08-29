@@ -100,13 +100,13 @@ public class Client extends GameApplet {
 
     public void updateItemHoverInterface(ItemDefinition def) {
         if (itemHover > 0 && def != null) {
-            String action = def.itemActions[1] == null ? "Use" : def.itemActions[1];
-            /*for (int i = 0; i <= def.itemActions.length; i++) {
-                if (def.itemActions[i] != null) {
-                    action = def.itemActions[i];
-                    continue;
+            String action = "Use";
+            for (int i = 0; i <= 2; i++) {
+                if (def.itemActions != null && def.itemActions[i] != null) {
+                    action = def.itemActions[i].equals("null") ? "Use" :  def.itemActions[i];
+                    break;
                 }
-            }*/
+            }
             RSInterface.getInterfaceCache()[23002].disabledMessage = "@whi@" + action + " @lre@" + def.name;
             if (ItemStats.itemstats[itemHover] != null) {
                 if (ItemStats.itemstats[itemHover].type == 1) {
