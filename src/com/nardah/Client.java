@@ -12,6 +12,7 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -33,10 +34,12 @@ public class Client extends GameApplet {
     private int lastHp = 0;
     private int lastSpec = 0;
     private int spinResult;
+    private int spinResultItem;
     private int currentSpin;
     private boolean spinning = false;
     private int spinDelay = 1;
     private long spinTime;
+    private Random random = new Random();
 	
 	
    /** Achievement shit added **/	
@@ -462,7 +465,7 @@ public class Client extends GameApplet {
     public static void uLinkNodes() {
         NpcDefinition.modelCache.unlinkAll();
         ItemDefinition.mruNodes2.unlinkAll();
-        ItemDefinition.mruNodes1.unlinkAll();
+        ItemDefinition.spriteCache.clear();
         Player.mruNodes.unlinkAll();
     }
 
@@ -1415,7 +1418,7 @@ public class Client extends GameApplet {
         ObjectDefinition.mruNodes2.unlinkAll();
         NpcDefinition.modelCache.unlinkAll();
         ItemDefinition.mruNodes2.unlinkAll();
-        ItemDefinition.mruNodes1.unlinkAll();
+        ItemDefinition.spriteCache.clear();
         Player.mruNodes.unlinkAll();
         Graphic.aMRUNodes_415.unlinkAll();
     }
@@ -2283,7 +2286,7 @@ public class Client extends GameApplet {
                     Rasterizer.method372(0.69999999999999996D);
                 if (k == 4)
                     Rasterizer.method372(0.59999999999999998D);
-                ItemDefinition.mruNodes1.unlinkAll();
+                ItemDefinition.spriteCache.clear();
                 drawGameScreenSprite = true;
             }
             if (j == 3) {
@@ -9874,7 +9877,49 @@ public class Client extends GameApplet {
 
                     int dragX = 0, dragY = 0;
                     Sprite draggedItem = null;
-
+                    if(spinning && child.interfaceId == 59512) {
+                        spinDelay = 100;
+                        float timeDif = (System.currentTimeMillis() - spinTime);
+                        //timeDif = timeDif / 100;
+                        //timeDif = timeDif * 100;
+                        int speed = (int) (timeDif / 100) / 5;
+                        System.out.println(speed);
+                        //speed = (int) ((7800 - speed) / spinDelay);
+                        if(timeDif % speed == 0) {
+                            //System.out.println(spinResultItem);
+                            int prev = RSInterface.getInterfaceCache()[59512].inv[0];
+                            for(int spin = 0; spin < RSInterface.getInterfaceCache()[59512].inv.length; spin++) {
+                                if(spin == 10) {
+                                    int next = RSInterface.getInterfaceCache()[59512].inv[0];
+                                    RSInterface.getInterfaceCache()[59512].inv[0] = prev;
+                                    prev = next;
+                                    break;
+                                }
+                                int next = RSInterface.getInterfaceCache()[59512].inv[spin + 1];
+                                RSInterface.getInterfaceCache()[59512].inv[spin + 1] = prev;
+                                prev = next;
+                            }
+                        }
+                        if(timeDif > 6500 && (RSInterface.getInterfaceCache()[59512].inv[5] == spinResultItem || RSInterface.getInterfaceCache()[59512].inv[5] == spinResultItem - 1)) {
+                            spinning = false;
+                        }
+                        /*spinDelay = 300;
+                      
+                        int speed = (int) ((7800 - timeDif) / spinDelay);
+                        if(speed < 10)
+                            speed = 10;
+                        currentSpin += speed;
+                        if(currentSpin > 451)
+                            currentSpin = 0;
+                        if(speed <= 10 && timeDif > 7700) {
+                            int answ = (spinResult + 1) * 41 - 20;
+                            System.out.println(answ + " - " + currentSpin);
+                            if(answ - 10 < currentSpin && answ + 10 < currentSpin) {
+                                spinning = false;
+                                spinDelay = 300;
+                            }
+                        }*/
+                    }
                     heightLoop:
                     for (int height = 0; height < child.height; height++) {
                         for (int width = 0; width < child.width; width++) {
@@ -10255,27 +10300,6 @@ public class Client extends GameApplet {
                         sprite = child.enabledSprite;
                     else
                         sprite = child.disabledSprite;
-                    if(spinning && child.interfaceId == 59514) {
-                        spinDelay = 300;
-                        float timeDif = (System.currentTimeMillis() - spinTime);
-                        int speed = (int) ((7800 - timeDif) / spinDelay);
-                        if(speed < 10)
-                            speed = 10;
-                        currentSpin += speed;
-                        if(currentSpin > 451)
-                            currentSpin = 0;
-                        if(speed <= 10 && timeDif > 7700) {
-                            int answ = (spinResult + 1) * 41 - 20;
-                            System.out.println(answ + " - " + currentSpin);
-                            if(answ - 10 < currentSpin && answ + 10 < currentSpin) {
-                                spinning = false;
-                                spinDelay = 300;
-                            }
-                        }
-                    }
-                    if(child.interfaceId == 59514) {
-                        childX += (currentSpin - 225);
-                    }
                     if (spellSelected == 1 && child.interfaceId == spellID && spellID != 0 && sprite != null) {
                         sprite.drawSprite(childX, childY, 0xffffff);
                     } else {
@@ -13478,9 +13502,10 @@ public class Client extends GameApplet {
                     return true;
                     
                 case 55:
-                    spinResult = incoming.readUByte();
+                    spinResultItem = incoming.readUByte();
                     currentSpin = 0;
                     spinning = true;
+                    spinResultItem = RSInterface.getInterfaceCache()[59512].inv[spinResultItem];
                     spinTime = System.currentTimeMillis();
                     opcode = -1;
                     return true;

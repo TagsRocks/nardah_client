@@ -1,10 +1,13 @@
 package com.nardah;
 
+import it.unimi.dsi.fastutil.ints.Int2ObjectArrayMap;
+
 public final class ItemDefinition {
 
     public static void nullLoader() {
         mruNodes2 = null;
-        mruNodes1 = null;
+        spriteCache.clear();
+        spriteCache = null;
         offsets = null;
         cache = null;
         dataBuf = null;
@@ -864,7 +867,7 @@ public final class ItemDefinition {
 
     public static Sprite getSprite(int item, int amount, int k) {
         if (k == 0) {
-            Sprite sprite = (Sprite) mruNodes1.get(item);
+            Sprite sprite = spriteCache.get(item);
             if (sprite != null && sprite.resizeHeight != amount && sprite.resizeHeight != -1) {
 
                 sprite.unlink();
@@ -965,7 +968,7 @@ public final class ItemDefinition {
             sprite.resizeHeight = j6;
         }
         if (k == 0)
-            mruNodes1.put(enabledSprite, item);
+            spriteCache.put(item, enabledSprite);
         Raster.initDrawingArea(ai1, i2, j2);
         Raster.setDrawingArea(k2, i3, l2, j3);
         Rasterizer.textureInt1 = k1;
@@ -982,7 +985,7 @@ public final class ItemDefinition {
 
     public static Sprite getSprite(int item, int amount, int k, int zoom) {
         if (k == 0) {
-            Sprite sprite = (Sprite) mruNodes1.get(item);
+            Sprite sprite = spriteCache.get(item);
             if (sprite != null && sprite.resizeHeight != amount && sprite.resizeHeight != -1) {
 
                 sprite.unlink();
@@ -1083,7 +1086,7 @@ public final class ItemDefinition {
             sprite.resizeHeight = j6;
         }
         if (k == 0)
-            mruNodes1.put(enabledSprite, item);
+            spriteCache.put(item, enabledSprite);
         Raster.initDrawingArea(ai1, i2, j2);
         Raster.setDrawingArea(k2, i3, l2, j3);
         Rasterizer.textureInt1 = k1;
@@ -1329,6 +1332,6 @@ public final class ItemDefinition {
     public String groundActions[];
     private static Buffer dataBuf;
     private static ItemDefinition[] cache;
-    public static Cache mruNodes1 = new Cache(100);
+    public static Int2ObjectArrayMap<Sprite> spriteCache = new Int2ObjectArrayMap<>();
     public static Cache mruNodes2 = new Cache(50);
 }
